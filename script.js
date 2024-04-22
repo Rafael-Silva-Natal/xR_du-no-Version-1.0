@@ -330,6 +330,7 @@ document.getElementById("botaoParar").addEventListener("click", function() {
 //=============================================================================
 
 //################################ sobre os botões de texto #################
+/*
 let linhasDeTexto = [];
 // adiciona ouvintes de evento de clique aos botões
 mensagem.addEventListener("click", function() {
@@ -367,4 +368,18 @@ const minhaDiv = document.querySelector("#minhaDivTexto");
       minhaDiv.innerHTML += linhasDeTexto[i].texto + "<br>";
     }
   }
+*/
+function openWidget() {
+  document.getElementById('widget').style.display = 'block';
+}
 
+function closeWidget() {
+  document.getElementById('widget').style.display = 'none';
+}
+function openWidget2() {
+  document.getElementById('widget2').style.display = 'block';
+}
+
+function closeWidget2() {
+  document.getElementById('widget2').style.display = 'none';
+}
