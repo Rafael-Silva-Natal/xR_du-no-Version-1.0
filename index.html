@@ -16,8 +16,8 @@
   transform: translate(-50%, -50%);
   width: 600px;
   height: 250px;
-  background-color: rgb(162, 217, 243);
-  border: 5px solid #45b0ee; /* Borda verde */
+  background-color: #8e0fe8;
+  border: 8px solid rgb(53, 4, 252); /* Borda */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 9999;
@@ -34,12 +34,12 @@
 }
 .widget-body {
   max-height: 200px;
-  overflow-y: auto;
+  overflow-y:auto;
 }
 .textoHelo1{
-  text-shadow: 2px 2px black;
+  text-shadow: 1px 1px  rgb(53, 4, 252);
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: white;
+  color: black;
   text-align: justify;      
 }
 .widget2 {
@@ -49,8 +49,8 @@
   transform: translate(-50%, -50%);
   width: 600px;
   height: 250px;
-  background-color: rgb(162, 217, 243);
-  border: 5px solid #45b0ee; /* Borda verde */
+  background-color: #8e0fe8;
+  border: 8px solid rgb(53, 4, 252); /* Borda verde */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 9999;
@@ -70,10 +70,10 @@
   overflow-y: auto;
 }
 .textoHelo2{
-  text-shadow: 2px 2px black;
+  text-shadow: 1px 1px  rgb(53, 4, 252);
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: white;
-  text-align: justify;        
+  color: black;
+  text-align: justify;
 }
 </style>
   <body class="body">
@@ -90,7 +90,7 @@
           <span class="close-btn" onclick="closeWidget()">X</span>
         </div>
         <div class="widget-body">
-          <p class="textoHelo1">O programador Rafael Silva diz: Bons estudos para todos! Espero que este programa 
+          <p class="textoHelo1">O programador Rafael Silva diz: Bons estudos para todos!<br><br> Espero que este programa 
             possa ajudar todos que precisarem de uma ferramenta de manipulação de frequências 
             sonoras. O uso é simples e instintivo, basta clicar nas notas musicais, e preencher
              os formulários de tempo e salvar as sequencias de notas clicando no botão gravar!
@@ -113,7 +113,7 @@
         <span class="close-btn2" onclick="closeWidget2()">X</span>
       </div>
       <div class="widget-body2">
-        <p class="textoHelo2">"O QUE É O xR_duíno???<br>Pode se dizer que é um Arduino caseiro feito com qualquer
+        <p class="textoHelo2">"O QUE É xR_duíno???<br><br>Pode se dizer que é um Arduino caseiro feito com qualquer
            caixinha de som, com leitor de pendrive, um pendrive, e um drive na configuração de relé sônica...<br>
            LÓGICA:<br>No pendrive,grava-se as notas musicais em suas devidas frequências, no formato mp3; 
            Ao reproduzir as notas musicais na caixa de som o fone deverá ser removido(ou não), para que as ondas das
@@ -162,10 +162,27 @@
     <div id="botoesAuxiliares">
         <button id="botaoApagar1">Apagar blocos</button><br><br>
         <button id="botaoParar">BREAK SOUND !</button><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <button id="gravador">Gravar</button>
+        <button id="gravador">Baixar</button>
     </div><!--div responsavel pelos botoes auxiliares-->
   </div>
       
       <script src="script.js"></script>
+      <script>
+
+function openWidget() {
+  document.getElementById('widget').style.display = 'block';
+}
+
+function closeWidget() {
+  document.getElementById('widget').style.display = 'none';
+}
+function openWidget2() {
+  document.getElementById('widget2').style.display = 'block';
+}
+
+function closeWidget2() {
+  document.getElementById('widget2').style.display = 'none';
+}
+      </script>
 </body>
 </html>
