@@ -327,6 +327,25 @@ document.getElementById("botaoParar").addEventListener("click", function() {
   pararTodosOsAudios(); // Chama a função para parar todos os áudios
   audioEmExecucao = false;
 });
+
+// ====================Sobre  os textos dos botões de apresentação da pagina:==================
+
+function openWidget() {
+  document.getElementById('widget').style.display = 'block';
+}
+
+function closeWidget() {
+  document.getElementById('widget').style.display = 'none';
+}
+function openWidget2() {
+  document.getElementById('widget2').style.display = 'block';
+}
+
+function closeWidget2() {
+  document.getElementById('widget2').style.display = 'none';
+}
+
+
 //=============================================================================
 
 //################################ sobre os botões de texto #################

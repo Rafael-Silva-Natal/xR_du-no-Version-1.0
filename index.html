@@ -9,74 +9,57 @@
     <link rel="shortcut icon" href="../imagens/Lampada.jpg"/>
 </head>
 <style>
-  .widget {
-  position: fixed;
+ .tutorial {
+  text-align: center;
+  margin-top: 50px;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 250px;
-  background-color: #8e0fe8;
-  border: 8px solid rgb(53, 4, 252); /* Borda */
+  padding:20px;
+  background-color: rgba(155, 208, 243, 0.753);
+  border: 10px solid rgb(80, 44, 10);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
+
+}
+/* Estilos para o botão Yes, I know */
+.tutorial button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #d43bfa;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 3px solid rgb(230, 49, 236);
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Estilos para o botão No, I don't know */
+.tutorial button:last-child {
+  background-color: #1937e2;
+  border: 3px solid rgb(60, 218, 21);
+}
+
+.content {
   display: none;
 }
-.widget-content {
-  padding: 20px;
-}
-.widget-header {
-  text-align: right;
-}
-.close-btn {
-  cursor: pointer;
-}
-.widget-body {
-  max-height: 200px;
-  overflow-y:auto;
-}
-.textoHelo1{
-  text-shadow: 1px 1px  rgb(53, 4, 252);
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: black;
-  text-align: justify;      
-}
-.widget2 {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 250px;
-  background-color: #8e0fe8;
-  border: 8px solid rgb(53, 4, 252); /* Borda verde */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
+#conteudo{
   display: none;
 }
-.widget-content2 {
-  padding: 20px;
-}
-.widget-header2 {
-  text-align: right;
-}
-.close-btn2 {
-  cursor: pointer;
-}
-.widget-body2 {
-  max-height: 200px;
-  overflow-y: auto;
-}
-.textoHelo2{
-  text-shadow: 1px 1px  rgb(53, 4, 252);
+.welcome{
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: black;
-  text-align: justify;
 }
 </style>
   <body class="body">
+    <div id="tutorial" class="tutorial">
+      <p class="welcome">Welcome!<p>
+      <p class="welcome">Do you know how to use this page?</p>
+      <button onclick="startTutorial()">Yes, I know</button>
+      <button onclick="redirecionar1()">No, I don't know</button>
+    </div>
+
+    <div id="content" class="content" style="display: none;">
 
     <div id="topo">
       <div id="paragrafo">
@@ -165,24 +148,22 @@
         <button id="gravador">Baixar</button>
     </div><!--div responsavel pelos botoes auxiliares-->
   </div>
-      
+</div>
       <script src="script.js"></script>
       <script>
+      //Função para redirecionar a pagina
+     function redirecionar1() {
+      // Altere o URL abaixo para a página desejada
+      window.location.href = "iniciante.html";
+  }
 
-function openWidget() {
-  document.getElementById('widget').style.display = 'block';
+
+        function startTutorial() {
+  document.getElementById('tutorial').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
+  document.getElementById('conteudo').style.display = 'block';
 }
 
-function closeWidget() {
-  document.getElementById('widget').style.display = 'none';
-}
-function openWidget2() {
-  document.getElementById('widget2').style.display = 'block';
-}
-
-function closeWidget2() {
-  document.getElementById('widget2').style.display = 'none';
-}
       </script>
 </body>
 </html>

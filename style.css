@@ -5,6 +5,73 @@
   background-position: center;
   background-repeat:no-repeat;
 }
+/* referente aos botões iniciais de apresentação Auto diz & hello world*/
+.widget {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 250px;
+  background-color: #8e0fe8;
+  border: 8px solid rgb(53, 4, 252); /* Borda */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: none;
+}
+.widget-content {
+  padding: 20px;
+}
+.widget-header {
+  text-align: right;
+}
+.close-btn {
+  cursor: pointer;
+}
+.widget-body {
+  max-height: 200px;
+  overflow-y:auto;
+}
+.textoHelo1{
+  text-shadow: 1px 1px  rgb(53, 4, 252);
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: black;
+  text-align: justify;      
+}
+.widget2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 250px;
+  background-color: #8e0fe8;
+  border: 8px solid rgb(53, 4, 252); /* Borda verde */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: none;
+}
+.widget-content2 {
+  padding: 20px;
+}
+.widget-header2 {
+  text-align: right;
+}
+.close-btn2 {
+  cursor: pointer;
+}
+.widget-body2 {
+  max-height: 200px;
+  overflow-y: auto;
+}
+.textoHelo2{
+  text-shadow: 1px 1px  rgb(53, 4, 252);
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: black;
+  text-align: justify;
+}/* referente aos botões iniciais de apresentação Auto diz & hello world*/
 
 #AudiosArray{
   background-color: #3473e9; /* Cor de fundo do botão */
