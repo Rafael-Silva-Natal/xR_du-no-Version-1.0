@@ -13,6 +13,7 @@ let audioEmExecucao = false; // Adicione essa variável fora das funções
 function criarBotao() {
     const novoBotao = document.createElement("button");
     novoBotao.textContent = "Dó";
+    novoBotao.dataset.tooltip = "Texto do tooltip para o botão Dó"; // Adiciona o texto do tooltip
     document.getElementById("minhaDiv").appendChild(novoBotao);// adiciona o novo botao a pagina
     botoesCriados.push(novoBotao); // Adiciona o botão ao array
  // Aplica a classe CSS para estilizar o botão
