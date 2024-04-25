@@ -9,71 +9,91 @@
     <link rel="shortcut icon" href="../imagens/Lampada.jpg"/>
 </head>
 <style>
-  .widget {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 250px;
-  background-color: #8e0fe8;
-  border: 8px solid rgb(53, 4, 252); /* Borda */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  display: none;
-}
-.widget-content {
-  padding: 20px;
-}
-.widget-header {
-  text-align: right;
-}
-.close-btn {
+  
+/*referente a mensagens de texto nos botoes*/
+.botaoSom,
+#mensagem,
+#botao1,
+#botao2,
+#botao3,
+#botao4,
+#botao5,
+#botao6,
+#botao7,
+#botao8,
+#botao9,
+#botaoApagar1,
+#botaoParar,
+#gravador
+ {
+  position: relative;
+  display: inline-block;
   cursor: pointer;
+  margin: 10px;
 }
-.widget-body {
-  max-height: 200px;
-  overflow-y:auto;
+.botaoSom::after,
+#mensagem::after,
+#botao1::after,
+#botao2::after,
+#botao3::after,
+#botao4::after,
+#botao5::after,
+#botao6::after,
+#botao7::after,
+#botao8::after,
+#botao9::after,
+#botaoApagar1::after,
+#botaoParar::after,
+#gravador::after
+ {
+  content: attr(data-tooltip);
+    position:absolute;
+    background-color: rgba(248, 23, 218, 0.8);
+    color: #fff;
+    padding: 20px; /* Ajuste o tamanho do padding conforme necessário */
+    border-radius: 5px;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    text-align: justify; /* Justifica o texto */
+    width: 100px; /* Define a largura do tooltip */
 }
-.textoHelo1{
-  text-shadow: 1px 1px  rgb(53, 4, 252);
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: black;
-  text-align: justify;      
+.botaoSom:hover::after,
+#mensagem:hover::after,
+#botao1:hover::after,
+#botao2:hover::after,
+#botao3:hover::after,
+#botao4:hover::after,
+#botao5:hover::after,
+#botao6:hover::after,
+#botao7:hover::after,
+#botao8:hover::after,
+#botao9:hover::after,
+#botaoApagar1:hover::after,
+#botaoParar:hover::after,
+#gravador:hover::after
+ {
+  opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
 }
-.widget2 {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 250px;
-  background-color: #8e0fe8;
-  border: 8px solid rgb(53, 4, 252); /* Borda verde */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  display: none;
-}
-.widget-content2 {
-  padding: 20px;
-}
-.widget-header2 {
-  text-align: right;
-}
-.close-btn2 {
-  cursor: pointer;
-}
-.widget-body2 {
-  max-height: 200px;
-  overflow-y: auto;
-}
-.textoHelo2{
-  text-shadow: 1px 1px  rgb(53, 4, 252);
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: black;
-  text-align: justify;
+
+#botao10{
+  background-color: #951afa; /* Cor de fundo do botão */
+        color: black; /* Cor do texto do botão */
+        border: 4px solid #f70af7; /* Borda do botão */
+        padding: 10px 20px; /* Espaçamento interno do botão */
+        border-radius: 20px; /* Borda arredondada do botão */
+        font-size: 13px; /* Tamanho da fonte do botão */  
+        margin-top: 0px;
+        margin-left: 45%;
+        color: black;
+        text-shadow: 1px 1px rgb(111, 8, 247);
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 </style>
   <body class="body">
@@ -136,49 +156,51 @@
   <div id="conteudo">
     <div id="meusBotoes">
       <spam class="titu">O autor diz:</spam><br>
-      <button id="mensagem" onclick="openWidget()">Bons estudos!</button><br>
+      <button id="mensagem" onclick="openWidget()" data-tooltip="This is a button">Bons estudos!</button><br>
       <spam class="titu">Sobre este Programa:</spam><br>
-      <button id="botao1"  onclick="openWidget2()">Helo xR_duíno!</button><br>
+      <button id="botao1"  onclick="openWidget2()" data-tooltip="This is a button2">Helo xR_duíno!</button><br>
 
       <spam class="titulos">Dó</spam><br>
-      <button id="botao2">261,63 Hz</button><br>
+      <button id="botao2"data-tooltip="This is a button2">261,63 Hz</button><br>
       <spam class="titulos2">Ré</spam><br>
-      <button id="botao3">293,66 Hz</button><br><!-- + botões-->
+      <button id="botao3" data-tooltip="This is a button2">293,66 Hz</button><br><!-- + botões-->
       <spam class="titulos3">Mi</spam><br>
-      <button id="botao4">329,63 Hz</button><br>
+      <button id="botao4" data-tooltip="This is a button2">329,63 Hz</button><br>
       <spam class="titulos4">Fá</spam><br>
-      <button id="botao5">349,23 Hz</button><br>
+      <button id="botao5" data-tooltip="This is a button2">349,23 Hz</button><br>
       <spam class="titulos5">Sol</spam><br>
-      <button id="botao6">392 Hz</button><br>
+      <button id="botao6" data-tooltip="This is a button2">392 Hz</button><br>
       <spam class="titulos6">Lá</spam><br>
-      <button id="botao7">440 Hz</button><br>
+      <button id="botao7" data-tooltip="This is a button2">440 Hz</button><br>
       <spam class="titulos7">Si</spam><br>
-      <button id="botao8">493,88 Hz</button><br>
+      <button id="botao8" data-tooltip="This is a button2">493,88 Hz</button><br>
       <spam class="titulos8">dó</spam><br>
-      <button id="botao9">523,25 Hz</button><br>
+      <button id="botao9" data-tooltip="This is a button2">523,25 Hz</button><br>
     </div>
     <div id="minhaDiv"></div><!--div responsavel pelos botoes em inline-block-->
     <div id="minhaDivTexto"></div><!--div responsavel pelo texto em inline-block com a div dos botoes-->
     <div id="botoesAuxiliares">
-        <button id="botaoApagar1">Apagar blocos</button><br><br>
-        <button id="botaoParar">BREAK SOUND !</button><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <button id="gravador">Baixar</button>
+        <button id="botaoApagar1" data-tooltip="This is a button2">Apagar blocos</button><br><br>
+        <button id="botaoParar" data-tooltip="This is a button2">BREAK SOUND !</button><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <button id="gravador" data-tooltip="This is a button2">Baixar</button>
     </div><!--div responsavel pelos botoes auxiliares-->
+<button id="botao10">Sair do modo iniciante</button>
   </div>
+  
       
       <script src="script.js"></script>
       <script>
         //criar botão para sair do modo iniciante...
-       /*      function redirecionar1() {
+            function redirecionar1() {
       // Altere o URL abaixo para a página desejada
-      window.location.href = "iniciante.html";
+      window.location.href = "index.html";
   }
 
   // Obtém o elemento do botão por seu ID
-  var botao = document.getElementById("meuBotao1");
+  var botao10 = document.getElementById("botao10");
 
   // Adiciona um ouvinte de evento ao botão
-  botao.addEventListener("click", redirecionar1);*/
+  botao10.addEventListener("click", redirecionar1);
 
       </script>
 </body>
