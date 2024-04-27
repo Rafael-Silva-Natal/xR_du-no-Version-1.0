@@ -18,8 +18,8 @@ let audiosParaDownload = [];
 // Função para criar um novo botão e gerar um novo áudio
 function criarBotao() {
   const novoBotao = document.createElement("button");
-  novoBotao.textContent = "Ré";
-  novoBotao.dataset.tooltip = "Texto do tooltip para o botão Ré"; // Adiciona o texto do tooltip
+  novoBotao.textContent = "Dó";
+  novoBotao.dataset.tooltip = "Texto do tooltip para o botão Dó"; // Adiciona o texto do tooltip
   document.getElementById("minhaDiv").appendChild();// adiciona o novo botao a pagina
   botoesCriados.push(novoBotao); // Adiciona o botão ao array
   // Aplica a classe CSS para estilizar o botão
@@ -67,7 +67,7 @@ document.getElementById("botao2").addEventListener("click", criarBotao);
 // Adiciona um evento de clique ao botão de download da pasta de downloads
 document.getElementById("gravador").addEventListener("click", baixarPastaDownloads);
 
-//#######################################D
+//######################################
 
 
 //###############################################Ré
