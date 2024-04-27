@@ -20,7 +20,7 @@ function criarBotao() {
   const novoBotao = document.createElement("button");
   novoBotao.textContent = "Dó";
   novoBotao.dataset.tooltip = "Texto do tooltip para o botão Dó"; // Adiciona o texto do tooltip
-  document.getElementById("minhaDiv").appendChild();// adiciona o novo botao a pagina
+  document.getElementById("minhaDiv").appendChild(novoBotao);// adiciona o novo botao a pagina
   botoesCriados.push(novoBotao); // Adiciona o botão ao array
   // Aplica a classe CSS para estilizar o botão
   novoBotao.classList.add("botaoSom");
@@ -131,8 +131,8 @@ document.getElementById("gravador").addEventListener("click", baixarPastaDownloa
 // Função para criar um novo botão e gerar um novo áudio
 function criarBotao3() {
   const novoBotao3 = document.createElement("button");
-  novoBotao3.textContent = "Ré";
-  novoBotao3.dataset.tooltip = "Texto do tooltip para o botão Ré"; // Adiciona o texto do tooltip
+  novoBotao3.textContent = "Mi";
+  novoBotao3.dataset.tooltip = "Texto do tooltip para o botão Mi"; // Adiciona o texto do tooltip
   document.getElementById("minhaDiv").appendChild(novoBotao3);// adiciona o novo botao a pagina
   botoesCriados.push(novoBotao3); // Adiciona o botão ao array
   // Aplica a classe CSS para estilizar o botão
