@@ -50,8 +50,12 @@ function criarBotao() {
 
 // Função para gerar um novo elemento de áudio e armazená-lo no array de downloads
 function gerarNovoAudio() {
+  
+  if (!audioEmExecucao) { // Verifica se não há áudio em execução
+    audioEmExecucao = true; // Define que um áudio está em execução
+
   var novoAudio = document.createElement("audio");
-  novoAudio.src = "public/Audio Piano/Piano_10_Segundos/2_Ré_293p66Hz.mp3";
+  novoAudio.src = "public/Audio Piano/Piano_10_Segundos/1_Dó_261p63Hz.mp3";
   audiosGerados.push(novoAudio);
   
   // Armazena a referência do áudio no array de downloads
@@ -60,9 +64,11 @@ function gerarNovoAudio() {
   // Adiciona um evento de fim de reprodução para remover o áudio do array de downloads
   novoAudio.addEventListener("ended", function() {
       audiosParaDownload.splice(audiosParaDownload.indexOf(novoAudio), 1);
+      audioEmExecucao = false;
   });
 
   novoAudio.play();
+}
 }       
 
 // Adiciona um evento de clique ao botão "criarBotao2"
@@ -93,6 +99,11 @@ function criarBotao2() {
 
 // Função para gerar um novo elemento de áudio e armazená-lo no array de downloads
 function gerarNovoAudio2() {
+  if (!audioEmExecucao) { // Verifica se não há áudio em execução
+    audioEmExecucao = true; // Define que um áudio está em execução
+
+
+
   var novoAudio2 = document.createElement("audio");
   novoAudio2.src = "public/Audio Piano/Piano_10_Segundos/2_Ré_293p66Hz.mp3";
   audiosGerados.push(novoAudio2);
@@ -103,11 +114,12 @@ function gerarNovoAudio2() {
   // Adiciona um evento de fim de reprodução para remover o áudio do array de downloads
   novoAudio2.addEventListener("ended", function() {
       audiosParaDownload.splice(audiosParaDownload.indexOf(novoAudio2), 1);
+      audioEmExecucao = false;
   });
 
   novoAudio2.play();
 }       
-
+}
 // Adiciona um evento de clique ao botão "criarBotao2"
 document.getElementById("botao3").addEventListener("click", criarBotao2);
 
@@ -133,6 +145,10 @@ function criarBotao3() {
 
 // Função para gerar um novo elemento de áudio e armazená-lo no array de downloads
 function gerarNovoAudio3() {
+  if (!audioEmExecucao) { // Verifica se não há áudio em execução
+    audioEmExecucao = true; // Define que um áudio está em execução
+
+
   var novoAudio3 = document.createElement("audio");
   novoAudio3.src = "public/Audio Piano/Piano_10_Segundos/3_Mi_329p63Hz.mp3";
   audiosGerados.push(novoAudio3);
@@ -143,10 +159,12 @@ function gerarNovoAudio3() {
   // Adiciona um evento de fim de reprodução para remover o áudio do array de downloads
   novoAudio3.addEventListener("ended", function() {
       audiosParaDownload.splice(audiosParaDownload.indexOf(novoAudio3), 1);
+      audioEmExecucao = false;
   });
 
   novoAudio3.play();
-}       
+}
+}  
 /*
 // Função para baixar a pasta de downloads
 function baixarPastaDownloads3() {
