@@ -159,49 +159,38 @@ function criarBotao2() {
     // Adiciona um evento de clique ao botão
     novoBotao2.addEventListener("click", function() {
         gerarNovoAudio2();
-        subirReferenciaDownload();
     }); 
 }
 
 // Função para gerar um novo elemento de áudio e armazená-lo nos arrays
 function gerarNovoAudio2() {
-    if (!audioEmExecucao) { // Verifica se não há áudio em execução
-        audioEmExecucao = true; // Define que um áudio está em execução
+    var novoAudio2 = document.createElement("audio");
+    novoAudio2.src = "public/Audio Piano/Piano_10_Segundos/2_Ré_293p66Hz.mp3";
+    audiosGerados.push(novoAudio2);
+    
+    // Armazena a referência do áudio no array de downloads
+    audiosParaDownload.push(novoAudio2);
 
-        var novoAudio2 = document.createElement("audio");
-        novoAudio2.src = "public/Audio Piano/Piano_10_Segundos/2_Ré_293p66Hz.mp3";
-        document.body.appendChild(novoAudio2);
-        audiosGerados.push(novoAudio2);
-        
-        // Armazena o áudio em execução junto com sua posição no array audiosGerados
-        audiosEmExecucao.push({audio: novoAudio2, index: audiosGerados.length - 1});
+    // Adiciona um evento de fim de reprodução para remover o áudio do array de downloads
+    novoAudio2.addEventListener("ended", function() {
+        audiosParaDownload.splice(audiosParaDownload.indexOf(novoAudio2), 1);
+    });
 
-        novoAudio2.play();
+    // Inicia o download dos áudios registrados no array de downloads quando o botão "gravador" for clicado
+    document.getElementById("gravador").addEventListener("click", function() {
+        baixarPastaDownloads();
+    });
 
-        // Adiciona um evento de fim de reprodução para redefinir audioEmExecucao como falso
-        novoAudio2.addEventListener("ended", function() {
-            audioEmExecucao = false;
-            // Remove o áudio em execução do array audiosEmExecucao
-            audiosEmExecucao.splice(audiosEmExecucao.findIndex(item => item.audio === novoAudio2), 1);
-        });
-    }
+    novoAudio2.play();
 }       
-
-// Função para subir a referência do áudio para o array de downloads
-function subirReferenciaDownload() {
-    if (audiosEmExecucao.length > 0) {
-        const audioAtual = audiosEmExecucao[audiosEmExecucao.length - 1]; // Pega o áudio mais recente em execução
-        audiosParaDownload.push(audioAtual); // Adiciona a referência do áudio ao array de downloads
-    }
-}
 
 // Função para baixar a pasta de downloads
 function baixarPastaDownloads() {
     // Cria um elemento <a> para cada áudio no array de downloads e simula o clique para iniciar o download
     audiosParaDownload.forEach(function(audio, index) {
         const link = document.createElement('a');
-        link.href = audio.audio.src;
-        link.download = `audio_${audio.index}.mp3`;
+        link.href = audio.src;
+        link.download = `audio_${index}.mp3`;
         link.style.display = 'none'; // Esconde o link
         document.body.appendChild(link);
         link.click();
@@ -210,10 +199,8 @@ function baixarPastaDownloads() {
 }
 
 // Adiciona um evento de clique ao botão "criarBotao2"
-document.getElementById("botao3").addEventListener("click", function() {
-    criarBotao2();
-    subirReferenciaDownload();
-});
+document.getElementById("botao3").addEventListener("click", criarBotao2);
+
 
 // Adiciona um evento de clique ao botão de download da pasta de downloads
 document.getElementById("gravador").addEventListener("click", baixarPastaDownloads);
