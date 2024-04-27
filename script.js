@@ -79,7 +79,7 @@ function memorizarAudio() {
 
 
 // Adiciona um evento de clique ao botão "criarBotao2"
-document.getElementById("botao2").addEventListener("click", criarBotao, memorizarAudio);
+document.getElementById("botao2").addEventListener("click", criarBotao);
 
 
 //######################################
