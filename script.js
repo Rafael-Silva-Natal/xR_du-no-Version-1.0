@@ -32,52 +32,64 @@ document.getElementById("gravador").addEventListener("click", baixarPastaDownloa
 //#######################################Dó
 
 // Função para criar um novo botão e gerar um novo áudio
+
+// Função para baixar a pasta de downloads
+function baixarPastaDownloads() {
+  // Cria um elemento <a> para cada áudio no array de downloads e simula o clique para iniciar o download
+  audiosParaDownload.forEach(function(audio, index) {
+    const link = document.createElement('a');
+    link.href = audio.src;
+    link.download = `audio_${index}.mp3`;
+    link.style.display = 'none'; // Esconde o link
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link); // Remove o link após o download
+  });
+}
+
+// Função para criar um novo botão e gerar um novo áudio
 function criarBotao() {
   const novoBotao = document.createElement("button");
   novoBotao.textContent = "Dó";
   novoBotao.dataset.tooltip = "Texto do tooltip para o botão Dó"; // Adiciona o texto do tooltip
-  document.getElementById("minhaDiv").appendChild(novoBotao);// adiciona o novo botao a pagina
+  document.getElementById("minhaDiv").appendChild(novoBotao); // adiciona o novo botao a pagina
   botoesCriados.push(novoBotao); // Adiciona o botão ao array
   // Aplica a classe CSS para estilizar o botão
   novoBotao.classList.add("botaoSom");
   // Adiciona um evento de clique ao botão
   novoBotao.addEventListener("click", function() {
-      gerarNovoAudio();
+    gerarNovoAudio();
+    memorizarAudio();
   }); 
 }
 
-// Função para gerar um novo elemento de áudio e armazená-lo no array de downloads
+// Função para gerar um novo elemento de áudio
 function gerarNovoAudio() {
-
   if (!audioEmExecucao) { // Verifica se não há áudio em execução
     audioEmExecucao = true; // Define que um áudio está em execução
 
     var novoAudio = document.createElement("audio");
     novoAudio.src = "public/Audio Piano/Piano_10_Segundos/1_Dó_261p63Hz.mp3";
     document.body.appendChild(novoAudio);
-    audiosGerados.push(novoAudio);
+    audiosEmExecucao.push(novoAudio);
 
     novoAudio.play();
 
     // Adiciona um evento de fim de reprodução para redefinir audioEmExecucao como falso
     novoAudio.addEventListener("ended", function() {
         audioEmExecucao = false;
+        audiosEmExecucao.splice(audiosEmExecucao.indexOf(novoAudio), 1); // Remove o áudio do array de execução
     });
+  }
 }
-}  
-function memorizarAudio(){
+
+// Função para adicionar o áudio ao array de downloads
+function memorizarAudio() {
   var novoAudio = document.createElement("audio");
   novoAudio.src = "public/Audio Piano/Piano_10_Segundos/1_Dó_261p63Hz.mp3";
- 
-  // Armazena a referência do áudio no array de downloads
   audiosParaDownload.push(novoAudio);
-
-  // Adiciona um evento de fim de reprodução para remover o áudio do array de downloads
-  novoAudio.addEventListener(function() {
-      audiosParaDownload.splice(audiosParaDownload.indexOf(novoAudio), 1);
-  });
-
 }
+
 
 // Adiciona um evento de clique ao botão "criarBotao2"
 document.getElementById("botao2").addEventListener("click", criarBotao, memorizarAudio);
