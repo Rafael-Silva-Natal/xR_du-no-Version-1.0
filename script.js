@@ -146,61 +146,54 @@ document.getElementById("gravador").addEventListener("click", baixarPastaDownloa
 //###############################################
 */
 //###############################################Mi
-
 // Função para criar um novo botão e gerar um novo áudio
 function criarBotao2() {
-    const novoBotao2 = document.createElement("button");
-    novoBotao2.textContent = "Ré";
-    novoBotao2.dataset.tooltip = "Texto do tooltip para o botão Ré"; // Adiciona o texto do tooltip
-    document.getElementById("minhaDiv").appendChild(novoBotao2);// adiciona o novo botao a pagina
-    botoesCriados.push(novoBotao2); // Adiciona o botão ao array
-    // Aplica a classe CSS para estilizar o botão
-    novoBotao2.classList.add("botaoSom2");
-    // Adiciona um evento de clique ao botão
-    novoBotao2.addEventListener("click", function() {
-        gerarNovoAudio2();
-    }); 
+  const novoBotao2 = document.createElement("button");
+  novoBotao2.textContent = "Ré";
+  novoBotao2.dataset.tooltip = "Texto do tooltip para o botão Ré"; // Adiciona o texto do tooltip
+  document.getElementById("minhaDiv").appendChild(novoBotao2);// adiciona o novo botao a pagina
+  botoesCriados.push(novoBotao2); // Adiciona o botão ao array
+  // Aplica a classe CSS para estilizar o botão
+  novoBotao2.classList.add("botaoSom2");
+  // Adiciona um evento de clique ao botão
+  novoBotao2.addEventListener("click", function() {
+      gerarNovoAudio2();
+  }); 
 }
 
-// Função para gerar um novo elemento de áudio e armazená-lo nos arrays
+// Função para gerar um novo elemento de áudio e armazená-lo no array de downloads
 function gerarNovoAudio2() {
-    var novoAudio2 = document.createElement("audio");
-    novoAudio2.src = "public/Audio Piano/Piano_10_Segundos/2_Ré_293p66Hz.mp3";
-    audiosGerados.push(novoAudio2);
-    
-    // Armazena a referência do áudio no array de downloads
-    audiosParaDownload.push(novoAudio2);
+  var novoAudio2 = document.createElement("audio");
+  novoAudio2.src = "public/Audio Piano/Piano_10_Segundos/2_Ré_293p66Hz.mp3";
+  audiosGerados.push(novoAudio2);
+  
+  // Armazena a referência do áudio no array de downloads
+  audiosParaDownload.push(novoAudio2);
 
-    // Adiciona um evento de fim de reprodução para remover o áudio do array de downloads
-    novoAudio2.addEventListener("ended", function() {
-        audiosParaDownload.splice(audiosParaDownload.indexOf(novoAudio2), 1);
-    });
+  // Adiciona um evento de fim de reprodução para remover o áudio do array de downloads
+  novoAudio2.addEventListener("ended", function() {
+      audiosParaDownload.splice(audiosParaDownload.indexOf(novoAudio2), 1);
+  });
 
-    // Inicia o download dos áudios registrados no array de downloads quando o botão "gravador" for clicado
-    document.getElementById("gravador").addEventListener("click", function() {
-        baixarPastaDownloads();
-    });
-
-    novoAudio2.play();
+  novoAudio2.play();
 }       
 
 // Função para baixar a pasta de downloads
 function baixarPastaDownloads() {
-    // Cria um elemento <a> para cada áudio no array de downloads e simula o clique para iniciar o download
-    audiosParaDownload.forEach(function(audio, index) {
-        const link = document.createElement('a');
-        link.href = audio.src;
-        link.download = `audio_${index}.mp3`;
-        link.style.display = 'none'; // Esconde o link
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link); // Remove o link após o download
-    });
+  // Cria um elemento <a> para cada áudio no array de downloads e simula o clique para iniciar o download
+  audiosParaDownload.forEach(function(audio, index) {
+      const link = document.createElement('a');
+      link.href = audio.src;
+      link.download = `audio_${index}.mp3`;
+      link.style.display = 'none'; // Esconde o link
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link); // Remove o link após o download
+  });
 }
 
 // Adiciona um evento de clique ao botão "criarBotao2"
 document.getElementById("botao3").addEventListener("click", criarBotao2);
-
 
 // Adiciona um evento de clique ao botão de download da pasta de downloads
 document.getElementById("gravador").addEventListener("click", baixarPastaDownloads);
