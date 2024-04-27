@@ -13,7 +13,7 @@ let audiosEmExecucao = [];
 // Array para armazenar referências aos áudios gerados para download
 let audiosParaDownload = [];
 
-
+/*
 // Função para baixar a pasta de downloads
 function baixarPastaDownloads() {
   // Cria um elemento <a> para cada áudio no array de downloads e simula o clique para iniciar o download
@@ -27,6 +27,34 @@ function baixarPastaDownloads() {
     document.body.removeChild(link); // Remove o link após o download
   });
 }
+*/
+const { dialog } = require('electron').remote;
+
+function baixarPastaDownloads() {
+  // Abre o diálogo de seleção de pasta do Electron
+  dialog.showOpenDialog({
+    properties: ['openDirectory', 'createDirectory']
+  }).then(result => {
+    if (!result.canceled && result.filePaths.length > 0) {
+      const pastaSelecionada = result.filePaths[0];
+      audiosParaDownload.forEach(function(audio, index) {
+        const link = document.createElement('a');
+        link.href = audio.src;
+        link.download = `audio_${index}.mp3`;
+        link.style.display = 'none'; // Esconde o link
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link); // Remove o link após o download
+      });
+    }
+  }).catch(err => {
+    console.error(err);
+  });
+}
+
+
+
+
 
 // Adiciona um evento de clique ao botão de download da pasta de downloads
 document.getElementById("gravador").addEventListener("click", baixarPastaDownloads);
