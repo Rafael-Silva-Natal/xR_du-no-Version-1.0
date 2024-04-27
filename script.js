@@ -102,7 +102,7 @@ function gerarNovoAudio2() {
 
   novoAudio2.play();
 }       
-
+/*
 // Função para baixar a pasta de downloads
 function baixarPastaDownloads2() {
   // Cria um elemento <a> para cada áudio no array de downloads e simula o clique para iniciar o download
@@ -115,14 +115,14 @@ function baixarPastaDownloads2() {
       link2.click();
       document.body.removeChild(link2); // Remove o link após o download
   });
-}
+}*/
 
 // Adiciona um evento de clique ao botão "criarBotao2"
 document.getElementById("botao3").addEventListener("click", criarBotao2);
-
+/*
 // Adiciona um evento de clique ao botão de download da pasta de downloads
 document.getElementById("gravador").addEventListener("click", baixarPastaDownloads2);
-
+*/
 
 //-------------------------------------------------------
 //###############################################
@@ -159,7 +159,7 @@ function gerarNovoAudio3() {
 
   novoAudio3.play();
 }       
-
+/*
 // Função para baixar a pasta de downloads
 function baixarPastaDownloads3() {
   // Cria um elemento <a> para cada áudio no array de downloads e simula o clique para iniciar o download
@@ -172,14 +172,14 @@ function baixarPastaDownloads3() {
       link3.click();
       document.body.removeChild(link3); // Remove o link após o download
   });
-}
+}*/
 
 // Adiciona um evento de clique ao botão "criarBotao2"
 document.getElementById("botao4").addEventListener("click", criarBotao3);
-
+/*
 // Adiciona um evento de clique ao botão de download da pasta de downloads
 document.getElementById("gravador").addEventListener("click", baixarPastaDownloads3);
-
+*/
 
 //###############################################
 
