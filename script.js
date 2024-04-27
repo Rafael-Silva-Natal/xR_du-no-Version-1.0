@@ -33,53 +33,43 @@ document.getElementById("gravador").addEventListener("click", baixarPastaDownloa
 
 //#######################################Dó
 
-
 // Função para criar um novo botão e gerar um novo áudio
 function criarBotao() {
   const novoBotao = document.createElement("button");
   novoBotao.textContent = "Dó";
   novoBotao.dataset.tooltip = "Texto do tooltip para o botão Dó"; // Adiciona o texto do tooltip
-  document.getElementById("minhaDiv").appendChild(novoBotao); // adiciona o novo botao a pagina
+  document.getElementById("minhaDiv").appendChild(novoBotao);// adiciona o novo botao a pagina
   botoesCriados.push(novoBotao); // Adiciona o botão ao array
   // Aplica a classe CSS para estilizar o botão
   novoBotao.classList.add("botaoSom");
   // Adiciona um evento de clique ao botão
   novoBotao.addEventListener("click", function() {
-    gerarNovoAudio();
-    memorizarAudio();
+      gerarNovoAudio();
   }); 
 }
 
-// Função para gerar um novo elemento de áudio
+// Função para gerar um novo elemento de áudio e armazená-lo no array de downloads
 function gerarNovoAudio() {
-  if (!audioEmExecucao) { // Verifica se não há áudio em execução
-    audioEmExecucao = true; // Define que um áudio está em execução
-
-    var novoAudio = document.createElement("audio");
-    novoAudio.src = "public/Audio Piano/Piano_10_Segundos/1_Dó_261p63Hz.mp3";
-    document.body.appendChild(novoAudio);
-    audiosEmExecucao.push(novoAudio);
-
-    novoAudio.play();
-
-    // Adiciona um evento de fim de reprodução para redefinir audioEmExecucao como falso
-    novoAudio.addEventListener("ended", function() {
-        audioEmExecucao = false;
-        audiosEmExecucao.splice(audiosEmExecucao.indexOf(novoAudio), 1); // Remove o áudio do array de execução
-    });
-  }
-}
-
-// Função para adicionar o áudio ao array de downloads
-function memorizarAudio() {
   var novoAudio = document.createElement("audio");
-  novoAudio.src = "public/Audio Piano/Piano_10_Segundos/1_Dó_261p63Hz.mp3";
+  novoAudio.src = "public/Audio Piano/Piano_10_Segundos/2_Ré_293p66Hz.mp3";
+  audiosGerados.push(novoAudio);
+  
+  // Armazena a referência do áudio no array de downloads
   audiosParaDownload.push(novoAudio);
-}
 
+  // Adiciona um evento de fim de reprodução para remover o áudio do array de downloads
+  novoAudio.addEventListener("ended", function() {
+      audiosParaDownload.splice(audiosParaDownload.indexOf(novoAudio), 1);
+  });
+
+  novoAudio.play();
+}       
 
 // Adiciona um evento de clique ao botão "criarBotao2"
 document.getElementById("botao2").addEventListener("click", criarBotao);
+
+
+//-------------------------------------------------------
 
 
 //######################################
@@ -117,27 +107,10 @@ function gerarNovoAudio2() {
 
   novoAudio2.play();
 }       
-/*
-// Função para baixar a pasta de downloads
-function baixarPastaDownloads2() {
-  // Cria um elemento <a> para cada áudio no array de downloads e simula o clique para iniciar o download
-  audiosParaDownload.forEach(function(audio, index) {
-      const link2 = document.createElement('a');
-      link2.href = audio.src;
-      link2.download = `audio_${index}.mp3`;
-      link2.style.display = 'none'; // Esconde o link
-      document.body.appendChild(link2);
-      link2.click();
-      document.body.removeChild(link2); // Remove o link após o download
-  });
-}*/
 
 // Adiciona um evento de clique ao botão "criarBotao2"
 document.getElementById("botao3").addEventListener("click", criarBotao2);
-/*
-// Adiciona um evento de clique ao botão de download da pasta de downloads
-document.getElementById("gravador").addEventListener("click", baixarPastaDownloads2);
-*/
+
 
 //-------------------------------------------------------
 //###############################################
