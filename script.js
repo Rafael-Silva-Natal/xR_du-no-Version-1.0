@@ -13,25 +13,6 @@ let audiosEmExecucao = [];
 // Array para armazenar referências aos áudios gerados para download
 let audiosParaDownload = [];
 
-// Função para baixar a pasta de downloads
-function baixarPastaDownloads() {
-  // Cria um elemento <a> para cada áudio no array de downloads e simula o clique para iniciar o download
-  audiosParaDownload.forEach(function(audio, index) {
-      const link = document.createElement('a');
-      link.href = audio.src;
-      link.download = `audio_${index}.mp3`;
-      link.style.display = 'none'; // Esconde o link
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link); // Remove o link após o download
-  });
-}
-// Adiciona um evento de clique ao botão de download da pasta de downloads
-document.getElementById("gravador").addEventListener("click", baixarPastaDownloads);
-
-//#######################################Dó
-
-// Função para criar um novo botão e gerar um novo áudio
 
 // Função para baixar a pasta de downloads
 function baixarPastaDownloads() {
@@ -46,6 +27,12 @@ function baixarPastaDownloads() {
     document.body.removeChild(link); // Remove o link após o download
   });
 }
+
+// Adiciona um evento de clique ao botão de download da pasta de downloads
+document.getElementById("gravador").addEventListener("click", baixarPastaDownloads);
+
+//#######################################Dó
+
 
 // Função para criar um novo botão e gerar um novo áudio
 function criarBotao() {
