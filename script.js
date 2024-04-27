@@ -78,6 +78,7 @@ document.getElementById("gravador").addEventListener("click", baixarPastaDownloa
 
 //#######################################D
 
+/*
 
 //###############################################Ré
 
@@ -143,7 +144,7 @@ document.getElementById("gravador").addEventListener("click", baixarPastaDownloa
 
 //-------------------------------------------------------
 //###############################################
-
+*/
 //###############################################Mi
 
 // Função para criar um novo botão e gerar um novo áudio
