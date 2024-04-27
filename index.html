@@ -9,6 +9,41 @@
     <link rel="shortcut icon" href="../imagens/Lampada.jpg"/>
 </head>
 <style>
+
+#gravador
+ {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px;
+}
+#gravador::after
+ {
+  content: attr(data-tooltip);
+    position:absolute;
+    background-color: rgba(248, 23, 218, 0.8);
+    color: #fff;
+    padding: 20px; /* Ajuste o tamanho do padding conforme necessário */
+    border-radius: 5px;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    text-align: justify; /* Justifica o texto */
+    width: 100px; /* Define a largura do tooltip */
+}
+#gravador:hover::after
+ {
+  opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+
+
  .tutorial {
   text-align: center;
   margin-top: 50px;
@@ -116,12 +151,25 @@
       </div>
     </div>
 </div>
+<div id="widget3" class="widget3">
+  <div class="widget-content3">
+    <div class="widget-header3">
+      <span class="close-btn3" onclick="closeWidget3()">X</span>
+    </div>
+    <div class="widget-body3">
+      <p class="textoHelo3">download...</p>
+      <!-- More extensive text goes here -->
+    </div>
+  </div>
+</div>
   <div id="conteudo">
     <div id="meusBotoes">
       <spam class="titu">O autor diz:</spam><br>
       <button id="mensagem" onclick="openWidget()">Bons estudos!</button><br>
       <spam class="titu">Sobre este Programa:</spam><br>
       <button id="botao1"  onclick="openWidget2()">Helo xR_duíno!</button><br>
+      <spam class="titu2">Regras para o download:</spam><br>
+      <button id="regras"  onclick="openWidget3()">Download</button><br>
 
       <spam class="titulos">Dó</spam><br>
       <button id="botao2">261,63 Hz</button><br>
@@ -145,7 +193,7 @@
     <div id="botoesAuxiliares">
         <button id="botaoApagar1">Apagar blocos</button><br><br>
         <button id="botaoParar">BREAK SOUND !</button><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <button id="gravador">Baixar</button>
+        <button id="gravador" data-tooltip="This is a button2">Baixar</button>
     </div><!--div responsavel pelos botoes auxiliares-->
   </div>
 </div>

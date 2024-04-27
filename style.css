@@ -95,6 +95,41 @@
   text-align: justify;
 }/* referente aos botões iniciais de apresentação Auto diz & hello world*/
 
+.widget3 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 250px;
+  background-color: #8e0fe8;
+  border: 8px solid rgb(53, 4, 252); /* Borda verde */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: none;
+}
+.widget-content3 {
+  padding: 20px;
+}
+.widget-header3 {
+  text-align: right;
+}
+.close-btn3 {
+  cursor: pointer;
+}
+.widget-body3 {
+  max-height: 200px;
+  overflow-y: auto;
+}
+.textoHelo3{
+  text-shadow: 1px 1px  rgb(53, 4, 252);
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: black;
+  text-align: justify;
+}/* referente aos botões iniciais de apresentação Auto diz & hello world*/
+
+
 #AudiosArray{
   background-color: #3473e9; /* Cor de fundo do botão */
   color: white; /* Cor do texto do botão */
@@ -236,9 +271,19 @@ display: inline-block;
        
       }
 
-
-
-     
+     #regras{
+        background-color: #8e0fe8;/*define estilização de box dos botoes de forma independente*/
+        color: black;
+        border: 5px solid rgb(252, 4, 4);
+        padding: 5px;
+        margin: 5px;
+        width: 120px;
+        height: 40px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 1.0em;
+        text-align:center;
+        border-radius: 10%;
+     }
       #mensagem,
       #botao1
       {
@@ -429,7 +474,13 @@ display: inline-block;
         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 1.1em;
       }
-    
+      .titu2{
+        color: rgb(250, 4, 4);
+        text-shadow: 1px 1px blue;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 1.1em;
+      }
+     
     .letrasLabel{
         color: rgb(242, 204, 247);
         text-shadow: 1px 1px rgb(78, 63, 143);

@@ -11,6 +11,7 @@
 <style>
   
 /*referente a mensagens de texto nos botoes*/
+#regras,
 .botaoSom,
 .botaoSom2,
 .botaoSom3,
@@ -38,6 +39,7 @@
   cursor: pointer;
   margin: 10px;
 }
+#regras::after,
 .botaoSom::after,
 .botaoSom2::after,
 .botaoSom3::after,
@@ -77,6 +79,7 @@
     text-align: justify; /* Justifica o texto */
     width: 100px; /* Define a largura do tooltip */
 }
+#regras:hover::after,
 .botaoSom:hover::after,
 .botaoSom2:hover::after,
 .botaoSom3:hover::after,
@@ -174,12 +177,25 @@
       </div>
     </div>
 </div>
+<div id="widget3" class="widget3">
+  <div class="widget-content3">
+    <div class="widget-header3">
+      <span class="close-btn3" onclick="closeWidget3()">X</span>
+    </div>
+    <div class="widget-body3">
+      <p class="textoHelo3">download...</p>
+      <!-- More extensive text goes here -->
+    </div>
+  </div>
+</div>
   <div id="conteudo">
     <div id="meusBotoes">
       <spam class="titu">O autor diz:</spam><br>
       <button id="mensagem" onclick="openWidget()" data-tooltip="This is a button">Bons estudos!</button><br>
       <spam class="titu">Sobre este Programa:</spam><br>
       <button id="botao1"  onclick="openWidget2()" data-tooltip="This is a button2">Helo xR_duíno!</button><br>
+      <spam class="titu2">Regras para o download:</spam><br>
+      <button id="regras"  onclick="openWidget3()" data-tooltip="This is a button3">Download</button><br>
 
       <spam class="titulos">Dó</spam><br>
       <button id="botao2"data-tooltip="This is a button2">261,63 Hz</button><br>
