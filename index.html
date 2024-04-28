@@ -21,20 +21,21 @@
  {
   content: attr(data-tooltip);
     position:absolute;
-    background-color: rgba(248, 23, 218, 0.8);
-    color: #fff;
+    background-color: rgba(252, 6, 6, 0.8);
+    color: black;
     padding: 20px; /* Ajuste o tamanho do padding conforme necessário */
     border-radius: 5px;
-    bottom: 1%;
+    bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
     pointer-events: none;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     text-align: justify; /* Justifica o texto */
     width: 100px; /* Define a largura do tooltip */
+    
 }
 #gravador:hover::after
  {
@@ -195,7 +196,7 @@
     <div id="botoesAuxiliares">
         <button id="botaoApagar1">Apagar blocos</button><br><br>
         <button id="botaoParar">BREAK SOUND !</button><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <button id="gravador" data-tooltip="This is a button2">Baixar</button>
+        <button id="gravador" data-tooltip="Antes de baixar leia as regras do download!">Baixar</button>
     </div><!--div responsavel pelos botoes auxiliares-->
   </div>
 </div>

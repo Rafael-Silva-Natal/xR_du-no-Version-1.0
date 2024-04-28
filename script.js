@@ -14,7 +14,7 @@ let audiosParaDownload = [];
 function criarBotao() {
   const novoBotao = document.createElement("button");
   novoBotao.textContent = "Dó";
-  novoBotao.dataset.tooltip = "Texto do tooltip para o botão Dó"; // Adiciona o texto do tooltip
+  novoBotao.dataset.tooltip = "Botão para ouvir e selecionar a nota Dó para download"; // Adiciona o texto do tooltip
   document.getElementById("minhaDiv").appendChild(novoBotao);// adiciona o novo botao a pagina
   botoesCriados.push(novoBotao); // Adiciona o botão ao array
   // Aplica a classe CSS para estilizar o botão
@@ -49,7 +49,7 @@ document.getElementById("botao2").addEventListener("click", criarBotao);
 function criarBotao2() {
   const novoBotao2 = document.createElement("button");
   novoBotao2.textContent = "Ré";
-  novoBotao2.dataset.tooltip = "Texto do tooltip para o botão Ré"; // Adiciona o texto do tooltip
+  novoBotao2.dataset.tooltip = "Botão para ouvir e selecionar a nota Ré para download"; // Adiciona o texto do tooltip
   document.getElementById("minhaDiv").appendChild(novoBotao2);// adiciona o novo botao a pagina
   botoesCriados.push(novoBotao2); // Adiciona o botão ao array
   // Aplica a classe CSS para estilizar o botão
@@ -84,7 +84,7 @@ document.getElementById("botao3").addEventListener("click", criarBotao2);
 function criarBotao3() {
   const novoBotao3 = document.createElement("button");
   novoBotao3.textContent = "Mi";
-  novoBotao3.dataset.tooltip = "Texto do tooltip para o botão Mi"; // Adiciona o texto do tooltip
+  novoBotao3.dataset.tooltip = "Botão para ouvir e selecionar a nota Mi para download"; // Adiciona o texto do tooltip
   document.getElementById("minhaDiv").appendChild(novoBotao3);// adiciona o novo botao a pagina
   botoesCriados.push(novoBotao3); // Adiciona o botão ao array
   // Aplica a classe CSS para estilizar o botão
@@ -118,7 +118,7 @@ document.getElementById("botao4").addEventListener("click", criarBotao3);
 function criarBotao4() {
   const novoBotao4 = document.createElement("button");
   novoBotao4.textContent = "Fá";
-  novoBotao4.dataset.tooltip = "Texto do tooltip para o botão Fá"; // Adiciona o texto do tooltip
+  novoBotao4.dataset.tooltip = "Botão para ouvir e selecionar a nota Fá para download"; // Adiciona o texto do tooltip
   document.getElementById("minhaDiv").appendChild(novoBotao4);// adiciona o novo botao a pagina
   botoesCriados.push(novoBotao4); // Adiciona o botão ao array
   // Aplica a classe CSS para estilizar o botão
@@ -152,7 +152,7 @@ document.getElementById("botao5").addEventListener("click", criarBotao4);
 function criarBotao5() {
   const novoBotao5 = document.createElement("button");
   novoBotao5.textContent = "Sol";
-  novoBotao5.dataset.tooltip = "Texto do tooltip para o botão Sol"; // Adiciona o texto do tooltip
+  novoBotao5.dataset.tooltip = "Botão para ouvir e selecionar a nota Sol para download"; // Adiciona o texto do tooltip
   document.getElementById("minhaDiv").appendChild(novoBotao5);// adiciona o novo botao a pagina
   botoesCriados.push(novoBotao5); // Adiciona o botão ao array
   // Aplica a classe CSS para estilizar o botão
@@ -187,7 +187,7 @@ document.getElementById("botao6").addEventListener("click", criarBotao5);
 function criarBotao6() {
   const novoBotao6 = document.createElement("button");
   novoBotao6.textContent = "Lá";
-  novoBotao6.dataset.tooltip = "Texto do tooltip para o botão Lá"; // Adiciona o texto do tooltip
+  novoBotao6.dataset.tooltip = "Botão para ouvir e selecionar a nota Lá para download"; // Adiciona o texto do tooltip
   document.getElementById("minhaDiv").appendChild(novoBotao6);// adiciona o novo botao a pagina
   botoesCriados.push(novoBotao6); // Adiciona o botão ao array
   // Aplica a classe CSS para estilizar o botão
@@ -221,7 +221,7 @@ document.getElementById("botao7").addEventListener("click", criarBotao6);
 function criarBotao7() {
   const novoBotao7 = document.createElement("button");
   novoBotao7.textContent = "Sí";
-  novoBotao7.dataset.tooltip = "Texto do tooltip para o botão Sí"; // Adiciona o texto do tooltip
+  novoBotao7.dataset.tooltip = "Botão para ouvir e selecionar a nota Sí para download"; // Adiciona o texto do tooltip
   document.getElementById("minhaDiv").appendChild(novoBotao7);// adiciona o novo botao a pagina
   botoesCriados.push(novoBotao7); // Adiciona o botão ao array
   // Aplica a classe CSS para estilizar o botão
@@ -255,7 +255,7 @@ document.getElementById("botao8").addEventListener("click", criarBotao7);
 function criarBotao8() {
   const novoBotao8 = document.createElement("button");
   novoBotao8.textContent = "dó";
-  novoBotao8.dataset.tooltip = "Texto do tooltip para o botão dó"; // Adiciona o texto do tooltip
+  novoBotao8.dataset.tooltip = "Botão para ouvir e selecionar a nota dó para download"; // Adiciona o texto do tooltip
   document.getElementById("minhaDiv").appendChild(novoBotao8);// adiciona o novo botao a pagina
   botoesCriados.push(novoBotao8); // Adiciona o botão ao array
   // Aplica a classe CSS para estilizar o botão
