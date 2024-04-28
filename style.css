@@ -8,23 +8,27 @@
 /* referente aos botões iniciais de apresentação Auto diz & hello world*/
 .body::-webkit-scrollbar,
 .widget-body::-webkit-scrollbar,
-.widget-body2::-webkit-scrollbar {
+.widget-body2::-webkit-scrollbar,
+.widget-body3::-webkit-scrollbar {
   width: 12px; /* largura da barra de rolagem */
 }
 .body::-webkit-scrollbar-track,
 .widget-body::-webkit-scrollbar-track,
-.widget-body2::-webkit-scrollbar-track {
+.widget-body2::-webkit-scrollbar-track,
+.widget-body3::-webkit-scrollbar-track {
   background-color: #97dcf1; /* cor de fundo da barra de rolagem */
 }
 .body::-webkit-scrollbar-thumb,
 .widget-body::-webkit-scrollbar-thumb,
-.widget-body2::-webkit-scrollbar-thumb {
+.widget-body2::-webkit-scrollbar-thumb,
+.widget-body3::-webkit-scrollbar-thumb {
   background-color: rgb(89, 159, 250); /* cor do botão da barra de rolagem */
   border-radius: 6px; /* arredondamento das bordas do botão da barra de rolagem */
 }
 .body::-webkit-scrollbar-thumb:hover,
 .widget-body::-webkit-scrollbar-thumb:hover,
-.widget-body2::-webkit-scrollbar-thumb:hover {
+.widget-body2::-webkit-scrollbar-thumb:hover,
+.widget-body3::-webkit-scrollbar-thumb:hover {
   background-color: rgb(3, 130, 248); /* cor do botão da barra de rolagem ao passar o mouse */
 }
 
@@ -54,6 +58,7 @@
 .widget-body {
   max-height: 200px;
   overflow-y:auto;
+  padding-right: 20px; /* Adicione um espaçamento inferior */
 }
 .textoHelo1{
   text-shadow: 1px 1px  rgb(53, 4, 252);
@@ -87,6 +92,7 @@
 .widget-body2 {
   max-height: 200px;
   overflow-y: auto;
+  padding-right: 20px; /* Adicione um espaçamento inferior */
 }
 .textoHelo2{
   text-shadow: 1px 1px  rgb(53, 4, 252);
@@ -121,6 +127,7 @@
 .widget-body3 {
   max-height: 200px;
   overflow-y: auto;
+  padding-right: 20px; /* Adicione um espaçamento inferior */
 }
 .textoHelo3{
   text-shadow: 1px 1px  rgb(53, 4, 252);
