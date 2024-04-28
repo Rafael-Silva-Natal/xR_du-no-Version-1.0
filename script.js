@@ -295,6 +295,19 @@ function apagarUltimoBotao() {
 // Adiciona um evento de clique ao botão "apagarBotao"
 document.getElementById("botaoApagar1").addEventListener("click", apagarUltimoBotao);
 
+//######################### Função apagar o ultimo elemento do array de download############
+function apagarUltimoDownload() {
+  if (audiosParaDownload.length > 0) {
+      const ultimoDownload = audiosParaDownload.pop(); // Remove o último elemento do array de downloads
+      // Aqui você pode realizar qualquer outra ação necessária, como excluir o arquivo do sistema de arquivos
+      console.log(`Removido o último download: ${ultimoDownload.src}`);
+  }
+}
+
+// Adiciona um evento de clique ao botão "apagarDownload"
+document.getElementById("botaoApagar1").addEventListener("click", apagarUltimoDownload);
+
+
 
 //##############################Parar audios################################
 // Função para parar todos os áudios em reprodução
