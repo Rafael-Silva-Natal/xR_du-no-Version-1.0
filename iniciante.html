@@ -149,8 +149,124 @@
         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
   
+
+
+
+
+
+
+
+
+
+
+  #menu {
+  position: fixed; /* Fixa a barra de menu na parte superior */
+  top: 0; /* Alinha a barra de menu ao topo da página */
+  left: 0; /* Alinha a barra de menu à esquerda da página */
+  width: 100%; /* Preenche toda a largura da janela do navegador */
+  display: flex;
+  background-color: #951afa; /* Cor de fundo do menu */
+  color: white;
+  padding: 10px; /* Remover espaçamento interno */
+  margin: 0; /* Remover margens */
+}
+
+#menu2 {
+  position: fixed; /* Fixa a barra de menu na parte superior */
+  top: 40px; /* Alinha a barra de menu ao topo da página */
+  left: 0; /* Alinha a barra de menu à esquerda da página */
+  width: 100%; /* Preenche toda a largura da janela do navegador */
+  display: flex;
+  background-color: #3955f3; /* Cor de fundo do menu */
+  padding: 3px; /* Remover espaçamento interno */
+  margin: 0; /* Remover margens */
+  
+}
+.menu-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 20px;
+}
+.menu-button2 {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 50px;
+}
+
+.menu-button:hover,
+.menu-button2:hover {
+  background-color: rgba(61, 4, 66, 0.1); /* Define a cor de fundo ao passar o mouse */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+}
+
+#Aba1{
+  display: none;
+  position: absolute; /* Posição absoluta para facilitar o posicionamento */
+  background-color: #951afa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-top: 20px;
+}
+#Aba2 {
+  display: none;
+  position: absolute; /* Posição absoluta para facilitar o posicionamento */
+  background-color: #951afa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-top: 20px;
+  left: 100px;
+}
+#opacity{
+  color: white;
+  background-color: #951afa; /* Cor de fundo padrão */
+  border: 0px;
+  transition: opacity 0.3s ease; /* Adiciona uma transição suave para a opacidade */
+}
+#opacity:hover {
+  background-color: rgba(61, 4, 66, 0.1); /* Define a cor de fundo ao passar o mouse */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+}
+#opacity:hover {
+  opacity: 0.7; /* Define a opacidade ao passar o mouse */
+}
+
+
 </style>
   <body class="body">
+
+    <div id="barraMenu">
+      <div id="menu">
+          <button class="menu-button" onclick="showMenu('Aba1')">Arquivo</button>
+          <button class="menu-button2" onclick="showMenu('Aba2')">Editar</button>
+          <!-- Adicione mais botões e menus conforme necessário -->
+        </div>
+        <div id="menu2"></div>
+  
+        <div id="Aba1">
+          <button id="opacity">Novo Projeto</button><br><br>
+          <button id="opacity">Abrir Projeto</button><br><br>
+          <button id="opacity">Salvar Projeto</button><br><br>
+          <button id="opacity">Exportar Projeto</button><br><br>
+          <button id="opacity">Fechar Programa</button>
+        </div>
+        <div id="Aba2">
+          <button id="opacity">Desfazer</button><br><br>
+          <button id="opacity">Refazer</button><br><br>
+          <button id="opacity">Copiar</button><br><br>
+          <button id="opacity">Recortar</button><br><br>
+          <button id="opacity">Colar</button>
+        </div>
+      </div>
+
+
+
+
 
     <div id="topo">
       <div id="paragrafo">
@@ -295,6 +411,37 @@
   // Adiciona um ouvinte de evento ao botão
   botao10.addEventListener("click", redirecionar1);
 
+
+
+
+  function mostrarBarraMenu() {
+                    var barraMenu = document.getElementById('barraMenu');
+                    barraMenu.style.display = 'block'; // Mostra a barra de menu quando o botão é clicado
+                }
+        // Função para mostrar o menu correspondente ao botão clicado
+        function showMenu(menuId) {
+          // Oculta todos os menus
+          var menus = document.querySelectorAll('[id^="Aba"]');
+          menus.forEach(menu => {
+            menu.style.display = "none";
+          });
+        
+          // Mostra o menu correspondente ao botão clicado
+          var menu = document.getElementById(menuId);
+          menu.style.display = "block";
+        }
+        
+        // Função para ocultar o menu ao clicar fora dele
+        window.onclick = function(event) {
+          if (!event.target.matches('.menu-button') && !event.target.matches('.menu-button2')) {
+            var menus = document.querySelectorAll('[id^="Aba"]');
+            menus.forEach(menu => {
+              menu.style.display = "none";
+            });
+          }
+        }
+
       </script>
+      
 </body>
 </html>

@@ -5,6 +5,11 @@
   background-position: center;
   background-repeat:no-repeat;
 }
+
+#Widget {
+  margin: 0px;
+  border: 0px;
+}
 /* referente aos botões iniciais de apresentação Auto diz & hello world*/
 .body::-webkit-scrollbar,
 .widget-body::-webkit-scrollbar,
@@ -190,6 +195,7 @@
 
 #topo{
   width: 100%;
+  border: 0px;
 }
  #paragrafo{
 display: inline-block;
