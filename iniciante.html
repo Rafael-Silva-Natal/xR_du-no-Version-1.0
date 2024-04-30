@@ -135,28 +135,6 @@
     transform: translateX(-50%) translateY(-10px);
 }
 
-#botao10{
-  background-color: #951afa; /* Cor de fundo do botão */
-        color: black; /* Cor do texto do botão */
-        border: 4px solid #f70af7; /* Borda do botão */
-        padding: 10px 20px; /* Espaçamento interno do botão */
-        border-radius: 20px; /* Borda arredondada do botão */
-        font-size: 13px; /* Tamanho da fonte do botão */  
-        margin-top: 0px;
-        margin-left: 45%;
-        color: black;
-        text-shadow: 1px 1px rgb(111, 8, 247);
-        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-  
-
-
-
-
-
-
-
-
 
 
   #menu {
@@ -205,7 +183,7 @@
   transition: background-color 0.3s ease; /* Adiciona uma transição suave */
 }
 
-#Aba1{
+#Aba3{
   display: none;
   position: absolute; /* Posição absoluta para facilitar o posicionamento */
   background-color: #951afa;
@@ -213,7 +191,7 @@
   padding: 10px;
   margin-top: 20px;
 }
-#Aba2 {
+#Aba4 {
   display: none;
   position: absolute; /* Posição absoluta para facilitar o posicionamento */
   background-color: #951afa;
@@ -248,14 +226,14 @@
         </div>
         <div id="menu2"></div>
   
-        <div id="Aba1">
+        <div id="Aba3">
           <button id="opacity">Novo Projeto</button><br><br>
           <button id="opacity">Abrir Projeto</button><br><br>
           <button id="opacity">Salvar Projeto</button><br><br>
           <button id="opacity">Exportar Projeto</button><br><br>
           <button id="opacity">Fechar Programa</button>
         </div>
-        <div id="Aba2">
+        <div id="Aba4">
           <button id="opacity">Desfazer</button><br><br>
           <button id="opacity">Refazer</button><br><br>
           <button id="opacity">Copiar</button><br><br>
@@ -264,16 +242,12 @@
         </div>
       </div>
 
-
-
-
-
-    <div id="topo">
-      <div id="paragrafo">
-      <p class="cabeçalho">xR_duíno IDE versão 1.0 (Modo iniciante)</p><br><br>
+   <div>
+      <p id="cabeçalho2">xR_duíno IDE versão 1.0</p>
       </div>
-      <!--<div id="botoesLogicos"></div>-->
-    </div>
+      <button id="botao10">Sair do modo iniciante</button>
+    
+
    <div id="widget" class="widget">
       <div class="widget-content">
         <div class="widget-header">
@@ -393,14 +367,14 @@
         <button id="botaoParar" data-tooltip="Botão que para o som gerado">BREAK SOUND !</button><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <button id="gravador" data-tooltip="Antes de baixar leia as regras do download!">Baixar</button>
     </div><!--div responsavel pelos botoes auxiliares-->
-<button id="botao10">Sair do modo iniciante</button>
+
   </div>
   
       
       <script src="script.js"></script>
       <script>
         //criar botão para sair do modo iniciante...
-            function redirecionar1() {
+            function redirecionar2() {
       // Altere o URL abaixo para a página desejada
       window.location.href = "index.html";
   }
@@ -409,10 +383,10 @@
   var botao10 = document.getElementById("botao10");
 
   // Adiciona um ouvinte de evento ao botão
-  botao10.addEventListener("click", redirecionar1);
+  botao10.addEventListener("click", redirecionar2);
 
 
-
+/*
 
   function mostrarBarraMenu() {
                     var barraMenu = document.getElementById('barraMenu');
@@ -439,7 +413,7 @@
               menu.style.display = "none";
             });
           }
-        }
+        }*/
 
       </script>
       

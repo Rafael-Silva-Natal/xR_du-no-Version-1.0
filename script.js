@@ -292,8 +292,18 @@ function apagarUltimoBotao() {
         ultimoBotao.parentNode.removeChild(ultimoBotao); // Remove o botão do DOM
     }
 }
-// Adiciona um evento de clique ao botão "apagarBotao"
-document.getElementById("botaoApagar1").addEventListener("click", apagarUltimoBotao);
+/*// Adiciona um evento de clique ao botão "apagarBotao"
+document.getElementById("botaoApagar1").addEventListener("click", apagarUltimoBotao);*/
+
+
+//função dupla em teste.... teoricamente apaga botões e para audios
+document.getElementById("botaoApagar1").addEventListener("click", function() {
+  apagarUltimoBotao();
+  pararTodosOsAudios(); // Chama a função para parar todos os áudios
+  audioEmExecucao = false;
+});
+
+
 
 //######################### Função apagar o ultimo elemento do array de download############
 function apagarUltimoDownload() {

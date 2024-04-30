@@ -109,7 +109,7 @@
   padding: 10px; /* Remover espaçamento interno */
   margin: 0; /* Remover margens */
 }
-
+/* barra divisoria*/
 #menu2 {
   position: fixed; /* Fixa a barra de menu na parte superior */
   top: 40px; /* Alinha a barra de menu ao topo da página */
@@ -150,26 +150,49 @@
   background-color: #951afa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  margin-top: 20px;
+  margin-top:-50px;
+  border-top: 0px;
 }
 #Aba2 {
+  border-top: 0px;
   display: none;
   position: absolute; /* Posição absoluta para facilitar o posicionamento */
   background-color: #951afa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  margin-top: 20px;
+  margin-top:-50px;
   left: 100px;
 }
-#opacity{
+#opacity,
+#opacity2,
+#opacity3,
+#opacity4,
+#opacity5,
+#opacity6,
+#opacity7,
+#opacity8,
+#opacity9,
+#opacity10{
   color: white;
   background-color: #951afa; /* Cor de fundo padrão */
   border: 0px;
   transition: opacity 0.3s ease; /* Adiciona uma transição suave para a opacidade */
 }
-#opacity:hover {
+
+#opacity:hover,
+#opacity2:hover,
+#opacity3:hover,
+#opacity4:hover,
+#opacity5:hover,
+#opacity6:hover,
+#opacity7:hover,
+#opacity8:hover,
+#opacity9:hover,
+#opacity10:hover{
   background-color: rgba(61, 4, 66, 0.1); /* Define a cor de fundo ao passar o mouse */
   transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+
+  
 }
 #opacity:hover {
   opacity: 0.7; /* Define a opacidade ao passar o mouse */
@@ -192,17 +215,17 @@
   
         <div id="Aba1">
           <button id="opacity">Novo Projeto</button><br><br>
-          <button id="opacity">Abrir Projeto</button><br><br>
-          <button id="opacity">Salvar Projeto</button><br><br>
-          <button id="opacity">Exportar Projeto</button><br><br>
-          <button id="opacity">Fechar Programa</button>
+          <button id="opacity2">Abrir Projeto</button><br><br>
+          <button id="opacity3">Salvar Projeto</button><br><br>
+          <button id="opacity4">Exportar Projeto</button><br><br>
+          <button id="opacity5">Fechar Programa</button>
         </div>
         <div id="Aba2">
-          <button id="opacity">Desfazer</button><br><br>
-          <button id="opacity">Refazer</button><br><br>
-          <button id="opacity">Copiar</button><br><br>
-          <button id="opacity">Recortar</button><br><br>
-          <button id="opacity">Colar</button>
+          <button id="opacity6">Desfazer</button><br><br>
+          <button id="opacity7">Refazer</button><br><br>
+          <button id="opacity8">Copiar</button><br><br>
+          <button id="opacity9">Recortar</button><br><br>
+          <button id="opacity10">Colar</button>
         </div>
       </div>
 
@@ -218,12 +241,11 @@
 
     <div id="content" class="content" style="display: none;">
 
-    <div id="topo">
-      <div id="paragrafo">
-      <p class="cabeçalho">xR_duíno IDE versão 1.0</p><br><br>
-      </div>
-      <!--<div id="botoesLogicos"></div>-->
+     <div>
+      <p id="cabeçalho">xR_duíno IDE versão 1.0</p>
     </div>
+     
+    
    <div id="widget" class="widget">
       <div class="widget-content">
         <div class="widget-header">
@@ -349,15 +371,7 @@
 </div>
       <script src="script.js"></script>
       <script>
-      //Função para redirecionar a pagina
-     function redirecionar1() {
-      // Altere o URL abaixo para a página desejada
-      window.location.href = "iniciante.html";
-  }
-
-
-
-        function startTutorialAndMostrarBarraMenu() {
+function startTutorialAndMostrarBarraMenu() {
             startTutorial();
             mostrarBarraMenu();
         }
@@ -366,13 +380,11 @@
             redirecionar1();
             mostrarBarraMenu();
         }
-    
       //Função para redirecionar a pagina
      function redirecionar1() {
       // Altere o URL abaixo para a página desejada
       window.location.href = "iniciante.html";
   }
-
 
         function startTutorial() {
   document.getElementById('tutorial').style.display = 'none';
@@ -396,7 +408,10 @@
         
           // Mostra o menu correspondente ao botão clicado
           var menu = document.getElementById(menuId);
+          /*  menu.style.display = "block";    original*/
+          if (menu) {
           menu.style.display = "block";
+              }
         }
         
         // Função para ocultar o menu ao clicar fora dele
