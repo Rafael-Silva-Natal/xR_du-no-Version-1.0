@@ -15,7 +15,7 @@
 .body::-webkit-scrollbar
  {
   width: 12px; /* largura da barra de rolagem */
-  display: none;
+  /*display: none;*/
 }
 
 /* referente aos botões iniciais de apresentação Auto diz & hello world*/
@@ -29,20 +29,20 @@
 .widget-body::-webkit-scrollbar-track,
 .widget-body2::-webkit-scrollbar-track,
 .widget-body3::-webkit-scrollbar-track {
-  background-color: #97dcf1; /* cor de fundo da barra de rolagem */
+  background-color: #951afa; /* cor de fundo da barra de rolagem */
 }
 .body::-webkit-scrollbar-thumb,
 .widget-body::-webkit-scrollbar-thumb,
 .widget-body2::-webkit-scrollbar-thumb,
 .widget-body3::-webkit-scrollbar-thumb {
-  background-color: rgb(89, 159, 250); /* cor do botão da barra de rolagem */
+  background-color: #be73fc;; /* cor do botão da barra de rolagem */
   border-radius: 6px; /* arredondamento das bordas do botão da barra de rolagem */
 }
 .body::-webkit-scrollbar-thumb:hover,
 .widget-body::-webkit-scrollbar-thumb:hover,
 .widget-body2::-webkit-scrollbar-thumb:hover,
 .widget-body3::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(3, 130, 248); /* cor do botão da barra de rolagem ao passar o mouse */
+  background-color:  #ac4afc; /* cor do botão da barra de rolagem ao passar o mouse */
 }
 
 .widget {
@@ -232,9 +232,9 @@
             padding: 10px 20px; /* Espaçamento interno do botão */
             border-radius: 20px; /* Borda arredondada do botão */
             font-size: 13px; /* Tamanho da fonte do botão */  
-            margin-top: 80px;
+            margin-top: 70px;
             margin-left: 0px;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             color: black;
             text-shadow: 1px 1px rgb(111, 8, 247);
             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -246,9 +246,9 @@
             padding: 10px 20px; /* Espaçamento interno do botão */
             border-radius: 20px; /* Borda arredondada do botão */
             font-size: 13px; /* Tamanho da fonte do botão */  
-            margin-top: 80px;
+            margin-top: 70px;
             margin-left: 0px;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             color: black;
             text-shadow: 1px 1px rgb(111, 8, 247);
             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -281,12 +281,12 @@
     #meusBotoes {
         display: inline-block;/*define formato e cores para a box e conteudo dos botões*/
         vertical-align: top;
-        margin-right: 350px;/*define a distancia entre as divs*/
+        margin-right: 300px;/*define a distancia entre as divs*/
         overflow-y: auto;/* sobre a barra de rolagem */
         height: 450px; /* ou qualquer outra altura desejada */
       }
       #minhaDiv {
-        width: 100px;
+        width: 150px;
         height: 500px;
         display: inline-block;
         vertical-align: top;
