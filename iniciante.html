@@ -160,6 +160,8 @@
   margin: 0; /* Remover margens */
   
 }
+
+
 .menu-button {
   background-color: transparent;
   border: none;
@@ -174,72 +176,168 @@
   color: white;
   cursor: pointer;
   font-size: 16px;
-  margin-right: 50px;
+  margin-right: 20px;
 }
-
+.menu-button3 {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 20px;
+}
+.menu-button4 {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  /*margin-right: 20px;*/
+}
 .menu-button:hover,
-.menu-button2:hover {
+.menu-button2:hover,
+.menu-button3:hover,
+.menu-button4:hover {
   background-color: rgba(61, 4, 66, 0.1); /* Define a cor de fundo ao passar o mouse */
   transition: background-color 0.3s ease; /* Adiciona uma transição suave */
 }
 
-#Aba3{
-  display: none;
+
+
+
+#Aba5{
+ display: none;
   position: absolute; /* Posição absoluta para facilitar o posicionamento */
   background-color: #951afa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  margin-top: 20px;
+  margin-top: -40px;
 }
-#Aba4 {
-  display: none;
+#Aba6 {
+ display: none;
   position: absolute; /* Posição absoluta para facilitar o posicionamento */
   background-color: #951afa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  margin-top: 20px;
+  margin-top: -40px;
   left: 100px;
 }
-#opacity{
+#Aba7 {
+  border-top: 0px;
+  display: none;
+  position: absolute; /* Posição absoluta para facilitar o posicionamento */
+  background-color: #951afa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-top:-40px;
+  left: 170px;
+}
+#Aba8 {
+  border-top: 0px;
+  display: none;
+  position: absolute; /* Posição absoluta para facilitar o posicionamento */
+  background-color: #951afa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-top:-40px;
+  left: 260px;
+}
+
+
+#opacity21,
+#opacity22,
+#opacity23,
+#opacity24,
+#opacity25,
+#opacity26,
+#opacity27,
+#opacity28,
+#opacity29,
+#opacity30,
+#opacity31,
+#opacity32,
+#opacity33,
+#opacity34,
+#opacity35,
+#opacity36,
+#opacity37,
+#opacity38,
+#opacity39,
+#opacity40{
   color: white;
   background-color: #951afa; /* Cor de fundo padrão */
   border: 0px;
   transition: opacity 0.3s ease; /* Adiciona uma transição suave para a opacidade */
 }
-#opacity:hover {
+
+#opacity21:hover,
+#opacity22:hover,
+#opacity23:hover,
+#opacity24:hover,
+#opacity25:hover,
+#opacity26:hover,
+#opacity27:hover,
+#opacity28:hover,
+#opacity29:hover,
+#opacity30:hover,
+#opacity31:hover,
+#opacity32:hover,
+#opacity33:hover,
+#opacity34:hover,
+#opacity35:hover,
+#opacity36:hover,
+#opacity37:hover,
+#opacity38:hover,
+#opacity39:hover,
+#opacity40:hover{
   background-color: rgba(61, 4, 66, 0.1); /* Define a cor de fundo ao passar o mouse */
   transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
 }
-#opacity:hover {
-  opacity: 0.7; /* Define a opacidade ao passar o mouse */
-}
-
 
 </style>
   <body class="body">
 
     <div id="barraMenu">
       <div id="menu">
-          <button class="menu-button" onclick="showMenu('Aba1')">Arquivo</button>
-          <button class="menu-button2" onclick="showMenu('Aba2')">Editar</button>
+          <button class="menu-button" onclick="showMenu3('Aba5')">Arquivo</button>
+          <button class="menu-button2" onclick="showMenu3('Aba6')">Editar</button>
+          <button class="menu-button3" onclick="showMenu3('Aba7')">Executar</button>
+          <button class="menu-button4" onclick="showMenu3('Aba8')">Ajuda</button>
           <!-- Adicione mais botões e menus conforme necessário -->
         </div>
         <div id="menu2"></div>
   
-        <div id="Aba3">
-          <button id="opacity">Novo Projeto</button><br><br>
-          <button id="opacity">Abrir Projeto</button><br><br>
-          <button id="opacity">Salvar Projeto</button><br><br>
-          <button id="opacity">Exportar Projeto</button><br><br>
-          <button id="opacity">Fechar Programa</button>
+        <div id="Aba5">
+          <button id="opacity21">Novo Projeto</button><br><br>
+          <button id="opacity22">Abrir Projeto</button><br><br>
+          <button id="opacity23">Salvar Projeto</button><br><br>
+          <button id="opacity24">Exportar Projeto</button><br><br>
+          <button id="opacity25">Fechar Programa</button>
         </div>
-        <div id="Aba4">
-          <button id="opacity">Desfazer</button><br><br>
-          <button id="opacity">Refazer</button><br><br>
-          <button id="opacity">Copiar</button><br><br>
-          <button id="opacity">Recortar</button><br><br>
-          <button id="opacity">Colar</button>
+        <div id="Aba6">
+          <button id="opacity26">Desfazer</button><br><br>
+          <button id="opacity27">Refazer</button><br><br>
+          <button id="opacity28">Copiar</button><br><br>
+          <button id="opacity29">Recortar</button><br><br>
+          <button id="opacity30">Colar</button>
         </div>
+        <div id="Aba7">
+          <button id="opacity31">Baixar programa</button><br><br>
+          <button id="opacity32">Reiniciar projeto</button><br><br>
+          <button id="opacity33">Gravador</button><br><br>
+          <button id="opacity34">Midia</button><br><br>
+          <button id="opacity35">Compartilhar</button>
+        </div>
+          <div id="Aba8">
+            <button id="opacity36">Lightpage</button><br><br>
+            <button id="opacity37">Github</button><br><br>
+            <button id="opacity38">Tutorial</button><br><br>
+            <button id="opacity39">Relatar problema</button><br><br>
+            <button id="opacity40">Sobre</button>
+          </div>
+
+
+
       </div>
 
    <div>
@@ -314,7 +412,8 @@
         que o usuário deseja baixar!<br><br>
         Para que a sequência de notas musicais seja registrada na ordem correta para download,
         basta selecionar as notas musicais, e reproduzir o som de cada nota uma única vez!
-        O som tem um tempo de 10 segundos, e o usuário pode parar a reprodução e seguir com
+        O som tem tempos pré definidos em 1 segundos, 10 segundos e 30 segundos,
+         e o usuário pode parar a reprodução e seguir com
         a reprodução das notas posteriores, ao terminar de reproduzir todas as notas musicais
         selecionadas, basta clicar no botão baixar! e todas as frequêcias serão baixadas na pasta
         download do computador na ordem em que foram criadas.<br><br>
@@ -378,52 +477,47 @@
       // Altere o URL abaixo para a página desejada
       window.location.href = "index.html";
   }
-
   // Obtém o elemento do botão por seu ID
   var botao10 = document.getElementById("botao10");
 
   // Adiciona um ouvinte de evento ao botão
   botao10.addEventListener("click", redirecionar2);
 
-
-
-  
-/*
-
+//##############################
+   // sugestão de inicialização direta na página
+       document.addEventListener("DOMContentLoaded", function() {
+  // Chama a função para ocultar a barra de menu
   function mostrarBarraMenu() {
                     var barraMenu = document.getElementById('barraMenu');
                     barraMenu.style.display = 'block'; // Mostra a barra de menu quando o botão é clicado
+                    Aba3.style.display = "none";
                 }
-        // Função para mostrar o menu correspondente ao botão clicado
-        function showMenu(menuId) {
+});
+
+//#######################################
+
+ // Função para mostrar o menu correspondente ao botão clicado
+ function showMenu3(menuId) {
           // Oculta todos os menus
-          var menus = document.querySelectorAll('[id^="Aba"]');
-          menus.forEach(menu => {
-            menu.style.display = "none";
-          });
+          var menus3 = document.querySelectorAll('[id^="Aba"]');
+         menus3.forEach(menu3 => {
+            menu3.style.display = "none";
+          }  );
         
           // Mostra o menu correspondente ao botão clicado
-          var menu = document.getElementById(menuId);
-          menu.style.display = "block";
+          var menu3 = document.getElementById(menuId);
+          menu3.style.display = "block";
         }
         
         // Função para ocultar o menu ao clicar fora dele
         window.onclick = function(event) {
-          if (!event.target.matches('.menu-button') && !event.target.matches('.menu-button2')) {
-            var menus = document.querySelectorAll('[id^="Aba"]');
-            menus.forEach(menu => {
-              menu.style.display = "none";
+          if (!event.target.matches('.menu-button') && !event.target.matches('.menu-button2') && !event.target.matches('.menu-button3') && !event.target.matches('.menu-button4')) {
+            var menus3 = document.querySelectorAll('[id^="Aba"]');
+            menus3.forEach(menu3 => {
+              menu3.style.display = "none";
             });
           }
-        }*/
-
-       /* sugestão de inicialização direta na página
-       
-       document.addEventListener("DOMContentLoaded", function() {
-  // Chama a função para ocultar a barra de menu
-  mostrarBarraMenu();
-
-});*/
+        }
 
       </script>
       

@@ -135,11 +135,31 @@
   color: white;
   cursor: pointer;
   font-size: 16px;
-  margin-right: 50px;
+  margin-right: 20px;
+}
+.menu-button3 {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 20px;
+}
+.menu-button4 {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  /*margin-right: 20px;*/
 }
 
+
+
 .menu-button:hover,
-.menu-button2:hover {
+.menu-button2:hover,
+.menu-button3:hover,
+.menu-button4:hover {
   background-color: rgba(61, 4, 66, 0.1); /* Define a cor de fundo ao passar o mouse */
   transition: background-color 0.3s ease; /* Adiciona uma transição suave */
 }
@@ -163,6 +183,29 @@
   margin-top:-50px;
   left: 100px;
 }
+#Aba3 {
+  border-top: 0px;
+  display: none;
+  position: absolute; /* Posição absoluta para facilitar o posicionamento */
+  background-color: #951afa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-top:-50px;
+  left: 170px;
+}
+#Aba4 {
+  border-top: 0px;
+  display: none;
+  position: absolute; /* Posição absoluta para facilitar o posicionamento */
+  background-color: #951afa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-top:-50px;
+  left: 260px;
+}
+
+
+
 #opacity,
 #opacity2,
 #opacity3,
@@ -172,7 +215,17 @@
 #opacity7,
 #opacity8,
 #opacity9,
-#opacity10{
+#opacity10,
+#opacity11,
+#opacity12,
+#opacity13,
+#opacity14,
+#opacity15,
+#opacity16,
+#opacity17,
+#opacity18,
+#opacity19,
+#opacity20{
   color: white;
   background-color: #951afa; /* Cor de fundo padrão */
   border: 0px;
@@ -188,7 +241,17 @@
 #opacity7:hover,
 #opacity8:hover,
 #opacity9:hover,
-#opacity10:hover{
+#opacity10:hover,
+#opacity11:hover,
+#opacity12:hover,
+#opacity13:hover,
+#opacity14:hover,
+#opacity15:hover,
+#opacity16:hover,
+#opacity17:hover,
+#opacity18:hover,
+#opacity19:hover,
+#opacity20:hover{
   background-color: rgba(61, 4, 66, 0.1); /* Define a cor de fundo ao passar o mouse */
   transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
 
@@ -209,6 +272,9 @@
       <div id="menu">
           <button class="menu-button" onclick="showMenu('Aba1')">Arquivo</button>
           <button class="menu-button2" onclick="showMenu('Aba2')">Editar</button>
+          <button class="menu-button3" onclick="showMenu('Aba3')">Executar</button>
+          <button class="menu-button4" onclick="showMenu('Aba4')">Ajuda</button>
+
           <!-- Adicione mais botões e menus conforme necessário -->
         </div>
         <div id="menu2"></div>
@@ -227,6 +293,21 @@
           <button id="opacity9">Recortar</button><br><br>
           <button id="opacity10">Colar</button>
         </div>
+        <div id="Aba3">
+          <button id="opacity11">Baixar programa</button><br><br>
+          <button id="opacity12">Reiniciar projeto</button><br><br>
+          <button id="opacity13">Gravador</button><br><br>
+          <button id="opacity14">Midia</button><br><br>
+          <button id="opacity15">Compartilhar</button>
+        </div>
+          <div id="Aba4">
+            <button id="opacity16">Lightpage</button><br><br>
+            <button id="opacity17">Github</button><br><br>
+            <button id="opacity18">Tutorial</button><br><br>
+            <button id="opacity19">Relatar problema</button><br><br>
+            <button id="opacity20">Sobre</button>
+          </div>
+
       </div>
 
 
@@ -244,7 +325,7 @@
      <div>
       <p id="cabeçalho">xR_duíno IDE versão 1.0</p>
     </div>
-     
+    <button id="botao11">Ir para o modo iniciante</button>
     
    <div id="widget" class="widget">
       <div class="widget-content">
@@ -312,7 +393,8 @@
         que o usuário deseja baixar!<br><br>
         Para que a sequência de notas musicais seja registrada na ordem correta para download,
         basta selecionar as notas musicais, e reproduzir o som de cada nota uma única vez!
-        O som tem um tempo de 10 segundos, e o usuário pode parar a reprodução e seguir com
+        O som tem tempos pré definidos em 1 segundos, 10 segundos e 30 segundos,
+         e o usuário pode parar a reprodução sonora, e seguir com
         a reprodução das notas posteriores, ao terminar de reproduzir todas as notas musicais
         selecionadas, basta clicar no botão baixar! e todas as frequêcias serão baixadas na pasta
         download do computador na ordem em que foram criadas.<br><br>
@@ -320,7 +402,7 @@
         Pode acontecer do usuário querer ouvir as frequencias desordenadamente, em seguida baixar
         o download, e os arquivos baixarem de forma desordenada, para evitar isso basta seguir a diretriz
         corretamente! O botão apagar blocos está disponível para apagar sequências indesejadas,
-        Lembrar sempre de reproduzir "uma única vez", cada audio na sequencia criada!<br><br> O botão
+        Lembrar sempre de reproduzir "uma única vez", cada audio na sequência criada!<br><br> O botão
         BreakSound está disponível para parar o som, não sendo nescessário reproduzir o audio
         completamente!
  
@@ -339,26 +421,85 @@
       <spam class="titu">Sobre este Programa:</spam><br>
       <button id="botao1"  onclick="openWidget2()">Helo xR_duíno!</button><br>
       <spam class="titu2">Regras para o download:</spam><br>
-      <button id="regras"  onclick="openWidget3()">Download</button><br><br><br>
+      <button id="regras"  onclick="openWidget3()">Download</button><br><br>
 
-      <spam class="titu3">Notas e frequências:</spam><br><br>
+      <spam class="titu3">Notas e frequências:</spam><br>
 
       <spam class="titulos">Dó</spam><br>
+      <spam class="titulos">1 segundo</spam><br>
       <button id="botao2">261,63 Hz</button><br>
+      <spam class="titulos">10 segundos</spam><br>
+      <button id="botao2p2">261,63 Hz</button><br>
+      <spam class="titulos">30 segundos</spam><br>
+      <button id="botao2p3">261,63 Hz</button><br>
+
+
       <spam class="titulos2">Ré</spam><br>
-      <button id="botao3">293,66 Hz</button><br><!-- + botões-->
+      <spam class="titulos2">1 segundo</spam><br>
+      <button id="botao3">293,66 Hz</button><br>
+      <spam class="titulos2">10 segundos</spam><br>
+      <button id="botao3p2">293,66 Hz</button><br>
+      <spam class="titulos2">30 segundos</spam><br>
+      <button id="botao3p3">293,66 Hz</button><br>
+
+
       <spam class="titulos3">Mi</spam><br>
+      <spam class="titulos3">1 segundo</spam><br>
       <button id="botao4">329,63 Hz</button><br>
+      <spam class="titulos3">10 segundos</spam><br>
+      <button id="botao4p2">329,63 Hz</button><br>
+      <spam class="titulos3">30 segundos</spam><br>
+      <button id="botao4p3">329,63 Hz</button><br>
+
+
       <spam class="titulos4">Fá</spam><br>
+      <spam class="titulos4">1 segundo</spam><br>
       <button id="botao5">349,23 Hz</button><br>
+      <spam class="titulos4">10 segundos</spam><br>
+      <button id="botao5p2">349,23 Hz</button><br>
+      <spam class="titulos4">30 segundos</spam><br>
+      <button id="botao5p3">349,23 Hz</button><br>
+
+
       <spam class="titulos5">Sol</spam><br>
+      <spam class="titulos5">1 segundo</spam><br>
       <button id="botao6">392 Hz</button><br>
+      <spam class="titulos5">10 segundos</spam><br>
+      <button id="botao6p2">392 Hz</button><br>
+      <spam class="titulos5">30 segundos</spam><br>
+      <button id="botao6p3">392 Hz</button><br>
+
+
       <spam class="titulos6">Lá</spam><br>
+      <spam class="titulos6">1 segundo</spam><br>
       <button id="botao7">440 Hz</button><br>
+      <spam class="titulos6">10 segundos</spam><br>
+      <button id="botao7p2">440 Hz</button><br>
+      <spam class="titulos6">30 segundos</spam><br>
+      <button id="botao7p3">440 Hz</button><br>
+
+
       <spam class="titulos7">Si</spam><br>
+      <spam class="titulos7">1 segundo</spam><br>
       <button id="botao8">493,88 Hz</button><br>
+      <spam class="titulos7">10 segundos</spam><br>
+      <button id="botao8p2">493,88 Hz</button><br>
+      <spam class="titulos7">30 segundos</spam><br>
+      <button id="botao8p3">493,88 Hz</button><br>
+
       <spam class="titulos8">dó</spam><br>
+      <spam class="titulos8">1 segundo</spam><br>
       <button id="botao9">523,25 Hz</button><br>
+      <spam class="titulos8">10 segundos</spam><br>
+      <button id="botao9p2">523,25 Hz</button><br>
+      <spam class="titulos8">30 segundos</spam><br>
+      <button id="botao9p3">523,25 Hz</button><br>
+
+
+
+
+
+
     </div>
     <div id="minhaDiv"></div><!--div responsavel pelos botoes em inline-block-->
     <div id="minhaDivTexto"></div><!--div responsavel pelo texto em inline-block com a div dos botoes-->
@@ -371,6 +512,23 @@
 </div>
       <script src="script.js"></script>
       <script>
+//criar botão para sair do modo iniciante...
+function redirecionar3() {
+      // Altere o URL abaixo para a página desejada
+      window.location.href = "iniciante.html";
+  }
+  // Obtém o elemento do botão por seu ID
+  var botao11 = document.getElementById("botao11");
+
+  // Adiciona um ouvinte de evento ao botão
+  botao11.addEventListener("click", redirecionar3);
+
+//##############################
+
+
+
+
+
 function startTutorialAndMostrarBarraMenu() {
             startTutorial();
             mostrarBarraMenu();
@@ -416,7 +574,7 @@ function startTutorialAndMostrarBarraMenu() {
         
         // Função para ocultar o menu ao clicar fora dele
         window.onclick = function(event) {
-          if (!event.target.matches('.menu-button') && !event.target.matches('.menu-button2')) {
+          if (!event.target.matches('.menu-button') && !event.target.matches('.menu-button2') && !event.target.matches('.menu-button3')&& !event.target.matches('.menu-button4')) {
             var menus = document.querySelectorAll('[id^="Aba"]');
             menus.forEach(menu => {
               menu.style.display = "none";
