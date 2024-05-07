@@ -232,9 +232,9 @@
             padding: 10px 20px; /* Espaçamento interno do botão */
             border-radius: 20px; /* Borda arredondada do botão */
             font-size: 13px; /* Tamanho da fonte do botão */  
-            margin-top: 0px;
+            margin-top: 80px;
             margin-left: 0px;
-            margin-bottom: 10px;
+            margin-bottom: 50px;
             color: black;
             text-shadow: 1px 1px rgb(111, 8, 247);
             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -246,9 +246,9 @@
             padding: 10px 20px; /* Espaçamento interno do botão */
             border-radius: 20px; /* Borda arredondada do botão */
             font-size: 13px; /* Tamanho da fonte do botão */  
-            margin-top: 0px;
+            margin-top: 80px;
             margin-left: 0px;
-            margin-bottom: 10px;
+            margin-bottom: 50px;
             color: black;
             text-shadow: 1px 1px rgb(111, 8, 247);
             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
