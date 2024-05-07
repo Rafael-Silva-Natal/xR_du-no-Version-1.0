@@ -352,7 +352,7 @@
         border-radius: 10%;
       
       }
-
+      #botao2ini,
       #botao2,
       #botao2p2,
       #botao2p3{
@@ -561,7 +561,7 @@
         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 1.3em;
     }
-
+    .botaoSomini,
     .botaoSom,
     .botaoSom10seg,
     .botaoSom30seg{
