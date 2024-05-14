@@ -252,7 +252,7 @@
             font-size: 10px; /* Tamanho da fonte do botão */  
             margin-top: 60px;
             margin-left: 1050px;
-            margin-bottom: 90px;
+            margin-bottom: 80px;
             color: black;
             text-shadow: 1px 1px rgb(111, 8, 247);
             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -296,6 +296,15 @@
    background-position: center; /* Centraliza a imagem na div */
    /* Define outras propriedades de layout, se necessário */
 
+
+   /* Arredonda os cantos */
+  border-radius: 15px; /* Ajuste o valor conforme necessário para mais ou menos arredondamento */
+  
+  /* Adiciona uma borda */
+  border: 5px solid #951afa; /* Substitua #000 pela cor desejada para a borda */
+  
+  /* Define outras propriedades de layout, se necessário */
+
       }
       #minhaDiv {
         margin-top: 150px;
@@ -313,6 +322,7 @@
         position: fixed;
        /* background-color: rgba(0, 0, 0, 0.5);  Cor de fundo com transparência */
        padding: 50px;
+       
       
       }
       #minhaDivTexto {
