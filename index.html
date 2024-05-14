@@ -88,16 +88,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
   #menu {
   position: fixed; /* Fixa a barra de menu na parte superior */
   top: 0; /* Alinha a barra de menu ao topo da página */
@@ -170,7 +160,7 @@
   background-color: #951afa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  margin-top:20px;
+  margin-top:30px;
   border-top: 0px;
 }
 #Aba2 {
@@ -180,7 +170,7 @@
   background-color: #951afa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  margin-top:20px;
+  margin-top:30px;
   left: 100px;
 }
 #Aba3 {
@@ -190,7 +180,7 @@
   background-color: #951afa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  margin-top:20px;
+  margin-top:30px;
   left: 170px;
 }
 #Aba4 {
@@ -200,7 +190,7 @@
   background-color: #951afa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  margin-top:20px;
+  margin-top:30px;
   left: 260px;
 }
 .menu-button5 {
@@ -275,8 +265,44 @@
 #barraMenu {
         display: none; /* Oculta a barra de menu inicialmente */
       }
+
+
+
+      body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Impede a barra de rolagem do corpo */
+            color: #fff; /* Cor do texto */
+            font-family: Arial, sans-serif; /* Fonte do texto */
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Redimensiona o vídeo para cobrir todo o elemento */
+            z-index: -1; /* Coloca o vídeo atrás de todos os outros elementos */
+        }
+
+        /* Estilos para a barra de menu */
+        #menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* background-color: rgba(0, 0, 0, 0.5);  Cor de fundo com transparência */
+            z-index: 1; /* Coloca a barra de menu sobre o vídeo */
+            /* Adicione outros estilos conforme necessário */
+        }
+
 </style>
   <body class="body">
+    <body class="body">
+      <video id="background-video" autoplay loop muted>
+        <source src="public/Imagens/Meu Filme3.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+    </video>
 
 
     <div id="barraMenu">

@@ -19,18 +19,21 @@
 }
 
 /* referente aos botões iniciais de apresentação Auto diz & hello world*/
+#minhaDiv::-webkit-scrollbar,
 .body::-webkit-scrollbar,
 .widget-body::-webkit-scrollbar,
 .widget-body2::-webkit-scrollbar,
 .widget-body3::-webkit-scrollbar {
   width: 12px; /* largura da barra de rolagem */
 }
+#minhaDiv::-webkit-scrollbar-track,
 .body::-webkit-scrollbar-track,
 .widget-body::-webkit-scrollbar-track,
 .widget-body2::-webkit-scrollbar-track,
 .widget-body3::-webkit-scrollbar-track {
   background-color: #951afa; /* cor de fundo da barra de rolagem */
 }
+#minhaDiv::-webkit-scrollbar-thumb,
 .body::-webkit-scrollbar-thumb,
 .widget-body::-webkit-scrollbar-thumb,
 .widget-body2::-webkit-scrollbar-thumb,
@@ -38,6 +41,7 @@
   background-color: #be73fc;; /* cor do botão da barra de rolagem */
   border-radius: 6px; /* arredondamento das bordas do botão da barra de rolagem */
 }
+#minhaDiv::-webkit-scrollbar-thumb:hover,
 .body::-webkit-scrollbar-thumb:hover,
 .widget-body::-webkit-scrollbar-thumb:hover,
 .widget-body2::-webkit-scrollbar-thumb:hover,
@@ -226,29 +230,29 @@
       
     }
     #botao10{
-      background-color: #951afa; /* Cor de fundo do botão */
+      background-color: #951afa; /* Cor de fundo do botão iniciatae*/
             color: black; /* Cor do texto do botão */
             border: 4px solid #f70af7; /* Borda do botão */
             padding: 10px 20px; /* Espaçamento interno do botão */
             border-radius: 20px; /* Borda arredondada do botão */
-            font-size: 13px; /* Tamanho da fonte do botão */  
-            margin-top: 70px;
-            margin-left: 0px;
-            margin-bottom: 40px;
+            font-size: 10px; /* Tamanho da fonte do botão */  
+            margin-top: 60px;
+            margin-left: 1050px;
+            margin-bottom: 70px;
             color: black;
             text-shadow: 1px 1px rgb(111, 8, 247);
             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
     #botao11{
-      background-color: #951afa; /* Cor de fundo do botão */
+      background-color: #951afa; /* Cor de fundo do botão expert*/
             color: black; /* Cor do texto do botão */
             border: 4px solid #f70af7; /* Borda do botão */
             padding: 10px 20px; /* Espaçamento interno do botão */
             border-radius: 20px; /* Borda arredondada do botão */
-            font-size: 13px; /* Tamanho da fonte do botão */  
-            margin-top: 70px;
-            margin-left: 0px;
-            margin-bottom: 40px;
+            font-size: 10px; /* Tamanho da fonte do botão */  
+            margin-top: 60px;
+            margin-left: 1050px;
+            margin-bottom: 90px;
             color: black;
             text-shadow: 1px 1px rgb(111, 8, 247);
             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -281,24 +285,39 @@
     #meusBotoes {
         display: inline-block;/*define formato e cores para a box e conteudo dos botões*/
         vertical-align: top;
-        margin-right: 300px;/*define a distancia entre as divs*/
+        margin-right: 250px;/*define a distancia entre as divs*/
         overflow-y: auto;/* sobre a barra de rolagem */
-        height: 450px; /* ou qualquer outra altura desejada */
+        height: 480px; /* ou qualquer outra altura desejada */
+        margin-left: 100px;
+        /* Adiciona uma imagem de fundo */
+   background-image: url('public/Imagens/guitarFrequency.jpg') ;
+   /* Define como a imagem de fundo deve ser exibida */
+   background-size: cover; /* Ajusta o tamanho da imagem para cobrir a div */
+   background-position: center; /* Centraliza a imagem na div */
+   /* Define outras propriedades de layout, se necessário */
+
       }
       #minhaDiv {
+        margin-top: 150px;
         width: 150px;
-        height: 500px;
+        height: 450px;
         display: inline-block;
         vertical-align: top;
         justify-content: center;
         align-items:flex-start;
-        position: relative;
-        top: 0;
+        
+        overflow-y: auto; /* Adiciona barra de rolagem vertical quando necessário */
+            overflow-x: hidden; /* Desativa a barra de rolagem horizontal */
+        z-index: 1; /* Coloca a div sobre o vídeo */
+        bottom: 0;
+        position: fixed;
+       /* background-color: rgba(0, 0, 0, 0.5);  Cor de fundo com transparência */
+       padding: 50px;
       
       }
       #minhaDivTexto {
         margin-right: 330px;
-        width: 10px;
+        width: 50px;
         height: 300px;
         display: inline-block;
         vertical-align: top;
