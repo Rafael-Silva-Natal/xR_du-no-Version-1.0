@@ -53,8 +53,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding:20px;
-  background-color: rgba(155, 208, 243, 0.753);
-  border: 10px solid #951afa;;
+  background-color: rgba(68, 88, 102, 0.753);
+  border: 10px solid  rgba(153, 49, 136, 0.5) ;
   border-radius: 10px;
 
 }
@@ -88,17 +88,22 @@
 }
 
 
-  #menu {
-  position: fixed; /* Fixa a barra de menu na parte superior */
-  top: 0; /* Alinha a barra de menu ao topo da página */
-  left: 0; /* Alinha a barra de menu à esquerda da página */
-  width: 100%; /* Preenche toda a largura da janela do navegador */
-  display: flex;
-  background-color: #951afa; /* Cor de fundo do menu */
-  color: white;
-  padding: 10px; /* Remover espaçamento interno */
-  margin: 0; /* Remover margens */
-}
+#menu {
+
+display: flex;
+ color: white;
+ padding: 10px; /* Remover espaçamento interno */
+ margin: 0; /* Remover margens */
+
+
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+           z-index: 1; /* Coloca a barra de menu sobre o vídeo */
+           /* Adicione outros estilos conforme necessário */
+       }
 /* barra divisoria*/
 #menu2 {
   position: fixed; /* Fixa a barra de menu na parte superior */
@@ -106,7 +111,7 @@
   left: 0; /* Alinha a barra de menu à esquerda da página */
   width: 100%; /* Preenche toda a largura da janela do navegador */
   display: flex;
-  background-color: #3955f3; /* Cor de fundo do menu */
+  background-color: rgba(153, 49, 136, 0.5) ; /* Cor de fundo do menu */
   padding: 3px; /* Remover espaçamento interno */
   margin: 0; /* Remover margens */
   
@@ -157,41 +162,53 @@
 #Aba1{
   display: none;
   position: absolute; /* Posição absoluta para facilitar o posicionamento */
-  background-color: #951afa;
+
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
   margin-top:30px;
   border-top: 0px;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+            z-index: 1; /* Coloca a barra de menu sobre o vídeo */
+            /* Adicione outros estilos conforme necessário */
 }
 #Aba2 {
   border-top: 0px;
   display: none;
   position: absolute; /* Posição absoluta para facilitar o posicionamento */
-  background-color: #951afa;
+ 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
   margin-top:30px;
   left: 100px;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+            z-index: 1; /* Coloca a barra de menu sobre o vídeo */
+            /* Adicione outros estilos conforme necessário */
 }
 #Aba3 {
   border-top: 0px;
   display: none;
   position: absolute; /* Posição absoluta para facilitar o posicionamento */
-  background-color: #951afa;
+  
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
   margin-top:30px;
   left: 170px;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+            z-index: 1; /* Coloca a barra de menu sobre o vídeo */
+            /* Adicione outros estilos conforme necessário */
 }
 #Aba4 {
   border-top: 0px;
   display: none;
   position: absolute; /* Posição absoluta para facilitar o posicionamento */
-  background-color: #951afa;
+
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
   margin-top:30px;
   left: 260px;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+            z-index: 1; /* Coloca a barra de menu sobre o vídeo */
+            /* Adicione outros estilos conforme necessário */
 }
 .menu-button5 {
   background-color: transparent;
@@ -228,9 +245,12 @@
 #opacity19,
 #opacity20{
   color: white;
-  background-color: #951afa; /* Cor de fundo padrão */
+ /* background-color: #951afa;  Cor de fundo padrão */
   border: 0px;
-  transition: opacity 0.3s ease; /* Adiciona uma transição suave para a opacidade */
+  
+  background-color: rgba(61, 4, 66, 0.1); /* Cor de fundo com transparência */
+            z-index: 1; /* Coloca a barra de menu sobre o vídeo */
+            /* Adicione outros estilos conforme necessário */
 }
 
 #opacity:hover,
@@ -253,7 +273,7 @@
 #opacity18:hover,
 #opacity19:hover,
 #opacity20:hover{
-  background-color: rgba(61, 4, 66, 0.1); /* Define a cor de fundo ao passar o mouse */
+  background-color: rgba(0, 0, 0, 0.5); /* Define a cor de fundo ao passar o mouse */
   transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
 
   
@@ -285,16 +305,7 @@
             z-index: -1; /* Coloca o vídeo atrás de todos os outros elementos */
         }
 
-        /* Estilos para a barra de menu */
-        #menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            /* background-color: rgba(0, 0, 0, 0.5);  Cor de fundo com transparência */
-            z-index: 1; /* Coloca a barra de menu sobre o vídeo */
-            /* Adicione outros estilos conforme necessário */
-        }
+      
 
 </style>
   <body class="body">

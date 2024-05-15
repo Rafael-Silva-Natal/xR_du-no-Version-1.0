@@ -31,7 +31,7 @@
 .widget-body::-webkit-scrollbar-track,
 .widget-body2::-webkit-scrollbar-track,
 .widget-body3::-webkit-scrollbar-track {
-  background-color: #951afa; /* cor de fundo da barra de rolagem */
+  background-color: rgba(153, 49, 136, 0.5) ; /* cor de fundo da barra de rolagem */
 }
 #minhaDiv::-webkit-scrollbar-thumb,
 .body::-webkit-scrollbar-thumb,
@@ -169,7 +169,7 @@
     
       background-color: white; /* Cor de fundo do botão */
           color:black; /* Cor do texto do botão */
-          border: 4px solid blue; /* Borda do botão */
+          border: 4px solid  rgba(110, 101, 245, 0.7) ; /* Borda do botão */
           padding: 10px 20px; /* Espaçamento interno do botão */
           border-radius: 5px; /* Borda arredondada do botão */
           font-size: 20px; /* Tamanho da fonte do botão */    
@@ -182,7 +182,7 @@
   
     background-color: blue; /* Cor de fundo do botão */
         color: white; /* Cor do texto do botão */
-        border: 4px solid #fe7c0a; /* Borda do botão */
+        border: 4px solid rgba(252, 165, 3, 0.8); /* Borda do botão */
         padding: 10px 20px; /* Espaçamento interno do botão */
         border-radius: 5px; /* Borda arredondada do botão */
         font-size: 20px; /* Tamanho da fonte do botão */
@@ -246,7 +246,7 @@
     #botao11{
       background-color: #951afa; /* Cor de fundo do botão expert*/
             color: black; /* Cor do texto do botão */
-            border: 4px solid #f70af7; /* Borda do botão */
+            border: 4px solid rgba(153, 49, 136, 0.5) ; /* Borda do botão */
             padding: 10px 20px; /* Espaçamento interno do botão */
             border-radius: 20px; /* Borda arredondada do botão */
             font-size: 10px; /* Tamanho da fonte do botão */  
@@ -267,7 +267,7 @@
     }
     
     #meusBotoes::-webkit-scrollbar-track {
-      background-color: #951afa; /* cor de fundo da barra de rolagem */
+      background-color: rgba(153, 49, 136, 0.5) ; /* cor de fundo da barra de rolagem */
     }
     
     #meusBotoes::-webkit-scrollbar-thumb {
@@ -301,7 +301,7 @@
   border-radius: 15px; /* Ajuste o valor conforme necessário para mais ou menos arredondamento */
   
   /* Adiciona uma borda */
-  border: 5px solid #951afa; /* Substitua #000 pela cor desejada para a borda */
+  border: 5px solid rgba(153, 49, 136, 0.5) ; /* Substitua #000 pela cor desejada para a borda */
   
   /* Define outras propriedades de layout, se necessário */
 
@@ -370,7 +370,7 @@
       {
         background-color: #8e0fe8;/*define estilização de box dos botoes de forma independente*/
         color: black;
-        border: 5px solid rgb(53, 4, 252);
+        border: 5px solid rgba(153, 49, 136, 0.5) ;
         padding: 5px;
         margin: 5px;
         width: 120px;
