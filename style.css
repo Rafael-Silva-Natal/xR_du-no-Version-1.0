@@ -287,10 +287,10 @@ video {
     #meusBotoes {
         display: inline-block;/*define formato e cores para a box e conteudo dos botões*/
         vertical-align: top;
-        margin-right: 250px;/*define a distancia entre as divs*/
+        margin-right: 150px;/*define a distancia entre as divs*/
         overflow-y: auto;/* sobre a barra de rolagem */
         height: 400px; /* ou qualquer outra altura desejada */
-        margin-left: 100px;
+        margin-left: 150px;
         background-image: url('public/Imagens/guitarFrequency.jpg') ;
         background-size: cover; /* Ajusta o tamanho da imagem para cobrir a div */
         background-position: center; /* Centraliza a imagem na div */
@@ -299,7 +299,7 @@ video {
       }
       #minhaDiv {
         margin-top: 150px;
-        width: 150px;
+        width: 200px;
         height: 450px;
         display: inline-block;
         vertical-align: top;
@@ -502,6 +502,19 @@ video {
         border-radius: 15%;
 
       }
+
+
+      
+ /* Cria um novo elemento de texto para indicar a posição do botão*/
+ .posicaoTexto {
+  color: blue;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+
+
+
 
       .titulos{
         color: rgb(128, 53, 24);
