@@ -1,3 +1,11 @@
+document.addEventListener('scroll', function() {
+  const meusBotoes = document.getElementById('meusBotoes');
+  const rect = meusBotoes.getBoundingClientRect();
+  meusBotoes.style.backgroundPosition = `center ${window.scrollY - rect.top}px`;
+});
+
+
+
 // Array para armazenar referências aos botões criados
 let botoesCriados = [];
 // Array para armazenar referências aos elementos de áudio gerados dinamicamente
@@ -20,7 +28,7 @@ function criarBotao() {
 
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao = document.createElement("span");
- textoPosicao.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao); // Adiciona o texto à página
  textosPosicao.push(textoPosicao); // Adiciona o texto ao array
@@ -70,7 +78,7 @@ function criarBotao10seg() {
 
 // Cria um novo elemento de texto para indicar a posição do botão
 const textoPosicao10seg = document.createElement("span");
-textoPosicao10seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+textoPosicao10seg.textContent = `Bloco ${botoesCriados.length+1} `;
 textoPosicao10seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
 document.getElementById("minhaDiv").appendChild(textoPosicao10seg); // Adiciona o texto à página
 textosPosicao.push(textoPosicao10seg); // Adiciona o texto ao array
@@ -122,7 +130,7 @@ function criarBotao30seg() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao30seg = document.createElement("span");
- textoPosicao30seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao30seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao30seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao30seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao30seg); // Adiciona o texto ao array
@@ -173,7 +181,7 @@ function criarBotao2() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao2 = document.createElement("span");
- textoPosicao2.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao2.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao2.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao2); // Adiciona o texto à página
  textosPosicao.push(textoPosicao2); // Adiciona o texto ao array
@@ -222,7 +230,7 @@ function criarBotao210seg() {
 
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao210seg = document.createElement("span");
- textoPosicao210seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao210seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao210seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao210seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao210seg); // Adiciona o texto ao array
@@ -270,7 +278,7 @@ function criarBotao230seg() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao230seg = document.createElement("span");
- textoPosicao230seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao230seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao230seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao230seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao230seg); // Adiciona o texto ao array
@@ -320,7 +328,7 @@ function criarBotao3() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao3 = document.createElement("span");
- textoPosicao3.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao3.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao3.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao3); // Adiciona o texto à página
  textosPosicao.push(textoPosicao3); // Adiciona o texto ao array
@@ -370,7 +378,7 @@ function criarBotao310seg() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao310seg = document.createElement("span");
- textoPosicao310seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao310seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao310seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao310seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao310seg); // Adiciona o texto ao array
@@ -418,7 +426,7 @@ function criarBotao330seg() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao330seg = document.createElement("span");
- textoPosicao330seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao330seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao330seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao330seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao330seg); // Adiciona o texto ao array
@@ -467,7 +475,7 @@ function criarBotao4() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao4 = document.createElement("span");
- textoPosicao4.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao4.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao4.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao4); // Adiciona o texto à página
  textosPosicao.push(textoPosicao4); // Adiciona o texto ao array
@@ -516,7 +524,7 @@ function criarBotao410seg() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao410seg = document.createElement("span");
- textoPosicao410seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao410seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao410seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao410seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao410seg); // Adiciona o texto ao array
@@ -565,7 +573,7 @@ function criarBotao430seg() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao430seg = document.createElement("span");
- textoPosicao430seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao430seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao430seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao430seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao430seg); // Adiciona o texto ao array
@@ -613,7 +621,7 @@ function criarBotao5() {
 
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao5 = document.createElement("span");
- textoPosicao5.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao5.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao5.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao5); // Adiciona o texto à página
  textosPosicao.push(textoPosicao5); // Adiciona o texto ao array
@@ -662,7 +670,7 @@ function criarBotao510seg() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao510seg = document.createElement("span");
- textoPosicao510seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao510seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao510seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao510seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao510seg); // Adiciona o texto ao array
@@ -709,7 +717,7 @@ function criarBotao530seg() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao530seg = document.createElement("span");
- textoPosicao530seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao530seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao530seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao530seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao530seg); // Adiciona o texto ao array
@@ -758,7 +766,7 @@ function criarBotao6() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao6 = document.createElement("span");
- textoPosicao6.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao6.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao6.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao6); // Adiciona o texto à página
  textosPosicao.push(textoPosicao6); // Adiciona o texto ao array
@@ -808,7 +816,7 @@ function criarBotao610seg() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao610seg = document.createElement("span");
- textoPosicao610seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao610seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao610seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao610seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao610seg); // Adiciona o texto ao array
@@ -855,7 +863,7 @@ function criarBotao630seg() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao630seg = document.createElement("span");
- textoPosicao630seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao630seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao630seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao630seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao630seg); // Adiciona o texto ao array
@@ -902,7 +910,7 @@ function criarBotao7() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao7 = document.createElement("span");
- textoPosicao7.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao7.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao7.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao7); // Adiciona o texto à página
  textosPosicao.push(textoPosicao7); // Adiciona o texto ao array
@@ -949,7 +957,7 @@ function criarBotao710seg() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao710seg = document.createElement("span");
- textoPosicao710seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao710seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao710seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao710seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao710seg); // Adiciona o texto ao array
@@ -996,7 +1004,7 @@ function criarBotao730seg() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao730seg = document.createElement("span");
- textoPosicao730seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao730seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao730seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao730seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao730seg); // Adiciona o texto ao array
@@ -1047,7 +1055,7 @@ function criarBotao8() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao8 = document.createElement("span");
- textoPosicao8.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao8.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao8.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao8); // Adiciona o texto à página
  textosPosicao.push(textoPosicao8); // Adiciona o texto ao array
@@ -1094,7 +1102,7 @@ function criarBotao810seg() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao810seg = document.createElement("span");
- textoPosicao810seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao810seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao810seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao810seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao810seg); // Adiciona o texto ao array
@@ -1143,7 +1151,7 @@ function criarBotao830seg() {
   
  // Cria um novo elemento de texto para indicar a posição do botão
  const textoPosicao830seg = document.createElement("span");
- textoPosicao830seg.textContent = ` Bloco ${botoesCriados.length+1}`;
+ textoPosicao830seg.textContent = `Bloco ${botoesCriados.length+1} `;
  textoPosicao830seg.classList.add("posicaoTexto"); // Adiciona a classe CSS para estilizar o texto
  document.getElementById("minhaDiv").appendChild(textoPosicao830seg); // Adiciona o texto à página
  textosPosicao.push(textoPosicao830seg); // Adiciona o texto ao array
